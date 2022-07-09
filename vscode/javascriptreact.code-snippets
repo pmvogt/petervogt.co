@@ -1,0 +1,143 @@
+{
+  "rimr": {
+    "prefix": "rimr",
+    "body": ["import React from 'react';"],
+    "description": "JavaScript: Import React"
+  },
+  "rimrd": {
+    "prefix": "rimrd",
+    "body": ["import ReactDOM from 'react-dom';"],
+    "description": "JavaScript: Import ReactDOM"
+  },
+  "rimrs": {
+    "prefix": "rimrs",
+    "body": ["import React, { useState } from 'react';"],
+    "description": "JavaScript: Import React and useState"
+  },
+  "rimrse": {
+    "prefix": "rimrse",
+    "body": ["import React, { useState, useEffect} from 'react';"],
+    "description": "JavaScript: Import React, useState and useEffect"
+  },
+  "rfc": {
+    "prefix": "rfc",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} = () => {",
+      "  return <div></div>;",
+      "};",
+      "export default ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}};"
+    ],
+    "description": "JavaScript: React functional component"
+  },
+  "rue": {
+    "prefix": "rue",
+    "body": ["useEffect(() => {", "\t$1", "}, []);"],
+    "description": "JavaScript: useEffect hook"
+  },
+  "rum": {
+    "prefix": "rum",
+    "body": ["useMemo(() => {", "\t$1", "}, []);"],
+    "description": "JavaScript: useMemo hook"
+  },
+  "rus": {
+    "prefix": "rus",
+    "body": ["const [${1}, set${1}] = useState(${2});"],
+    "description": "JavaScript: useState hook"
+  },
+  "ruc": {
+    "prefix": "ruc",
+    "body": ["const ${1} = useContext(${2});"],
+    "description": "JavaScript: useContext hook"
+  },
+  "rucb": {
+    "prefix": "rucb",
+    "body": [
+      "const handleCallback = useCallback(() => {",
+      "\t$1",
+      "}, [${2}]);"
+    ],
+    "description": "JavaScript: useCallback hook"
+  },
+  "rur": {
+    "prefix": "rur",
+    "body": ["const ${1} = useRef(${2});"],
+    "description": "JavaScript: useRef hook"
+  },
+
+  "ngss": {
+    "prefix": "ngss",
+    "body": [
+      "export const getServerSideProps = async context => {",
+      "  return {",
+      "    props: {},",
+      "  };",
+      "};"
+    ],
+    "description": "JavaScript: Next.js get server side props"
+  },
+  "ngsp": {
+    "prefix": "ngsp",
+    "body": [
+      "export const getStaticProps = async context => {",
+      "  return {",
+      "    props: {},",
+      "  };",
+      "};"
+    ],
+    "description": "JavaScript: Next.js get static props"
+  },
+  "ngspa": {
+    "prefix": "ngspa",
+    "body": [
+      "export const getStaticPaths = async () => {",
+      "    return {",
+      "        paths:[${1}],",
+      "        fallback:false",
+      "    }",
+      "}"
+    ],
+    "description": "JavaScript: Next.js get static path"
+  },
+  "ncapp": {
+    "prefix": "ncapp",
+    "body": [
+      "const MyApp = ({ Component, pageProps }) => {",
+      "  return <Component {...pageProps} />;",
+      "}",
+      "",
+      "export default MyApp;"
+    ],
+    "description": "JavaScript: Next.js custom app"
+  },
+  "ncdoc": {
+    "prefix": "ncdoc",
+    "body": [
+      "import { Html, Main, NextScript } from \"next/document\";",
+      "",
+      "const Document = () => {",
+      "  return (",
+      "    <Html lang=\"en\">",
+      "      <body>",
+      "        <Main />",
+      "        <NextScript />",
+      "      </body>",
+      "    </Html>",
+      "  );",
+      "};",
+      "",
+      "export default Document;"
+    ],
+    "description": "JavaScript: Next.js custom document"
+  },
+  "ngapi": {
+    "prefix": "ngapi",
+    "body": [
+      "const handler = (req, res) => {",
+      "  res.status(200).json({ name: \"John Doe\" });",
+      "};",
+      "",
+      "export default handler;"
+    ],
+    "description": "Javascript: Next.js API Route"
+  }
+}
