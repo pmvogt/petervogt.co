@@ -14,7 +14,7 @@ export const Toggle = () => {
       name='toggle'
     >
       <motion.svg
-        className='w-8 h-8 text-eggshell-50'
+        className='w-8 h-8 text-slate-900 dark:text-eggshell-50'
         fill='none'
         viewBox='0 0 24 24'
         stroke='currentColor'
