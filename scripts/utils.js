@@ -53,6 +53,7 @@ export const getWorkPosts = (pageIndex) => {
 
       return { data, content, slug };
     })
+
     .filter((workPost) => workPost);
 
   return workPosts;

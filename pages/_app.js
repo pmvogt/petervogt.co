@@ -6,9 +6,7 @@ import Layout from '../components/layouts/Layout';
 function MyApp({ Component, pageProps }) {
   return (
     <MDXProvider components={MDXComponents}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </MDXProvider>
   );
 }

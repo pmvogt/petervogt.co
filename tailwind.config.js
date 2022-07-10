@@ -468,7 +468,10 @@ module.exports = {
         '4/3': '4 / 3',
       },
       backgroundImage: {
+        'gradient-dark':
+          'linear-gradient(180deg, #150923 0%, #130F2F 0.10%, #150923 100%)',
         'mp-1': "url('/mesh-portrait-1.png')",
+        'm-dark': "url('/bg-mesh-dark.png')",
         'ml-1': "url('/mesh-landscape-1.png')",
       },
       gridTemplateRows: {
