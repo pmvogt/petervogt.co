@@ -1,26 +1,26 @@
-import Link from 'next/link';
 import { React } from 'react';
-import { navItems } from '../data/navItems';
+
 import { Toggle } from './Toggle';
+import { Nav } from './Nav';
 
 const Header = () => {
   return (
     <header className='pt-8 pb-4 px-7 text-slate-900 dark:text-eggshell-50'>
-      <div className='flex items-center w-full pb-4 border-b-2 md:justify-between lg:border-b-0 border-slate-700 lg:pb-0'>
-        <ul className='flex flex-col items-start w-full md:flex-row md:items-center md:w-auto'>
-          <li className='pr-8 align-middle'>
+      <div className='flex items-center w-full pb-4 border-b md:justify-between lg:border-b-0 border-slate-700/50 dark:border-slate-100/50 lg:pb-0'>
+        <ul className='flex flex-col items-start w-full md:flex-row md:items-center md:w-1/2'>
+          <li className='pr-12'>
             <h1 className='font-serif font-semibold text-7 md:text-9 lg:text-11 xl:text-13 tracking-1 md:leading-8 lg:leading-10'>
               Peter Vogt
             </h1>
           </li>
-          <li className='flex-1 hidden w-full py-4 pl-8 pr-8 align-middle border-l-2 border-r-2 xl:block border-slate-700'>
+          <li className='flex-1 hidden w-full py-4 pl-8 pr-8 align-middle border-l border-r xl:block border-slate-700/50 dark:border-slate-100/50'>
             <h2 className='font-sans text-base font-normal leading-normal text-left'>
-              Product designer, design technologist
+              Product Designer, Design Technologist
             </h2>
           </li>
-          <li className='flex-1 hidden w-full py-6 pl-8 pr-8 align-middle border-r-2 xl:block border-slate-700'>
+          <li className='flex-1 hidden w-full py-6 pl-8 pr-8 align-middle border-r xl:block border-slate-700/50 dark:border-slate-100/50'>
             <h2 className='font-sans text-base font-normal leading-normal text-left'>
-              Currently sr. designer @ USAA
+              Currently Sr. Designer @ USAA
             </h2>
           </li>
         </ul>
@@ -45,28 +45,11 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <h2 className='block pt-6 lg:hidden'>
-        Product designer & design technologist. Currently sr. designer @ USAA
+
+      <h2 className='block py-6 lg:hidden'>
+        Product Designer & Design Technologist. Currently: Sr. Designer @ USAA
       </h2>
-      <nav className='flex items-center'>
-        {navItems.map((item, index) => {
-          return (
-            <ul
-              className='flex justify-start mt-4 md:mt-6 active:accent-purpleDark-400'
-              key={index}
-            >
-              <Link href={item.path}>
-                <li
-                  className='mt-4 mr-4 font-sans cursor-pointer text-md tracking-9'
-                  key={index}
-                >
-                  {item.name}
-                </li>
-              </Link>
-            </ul>
-          );
-        })}
-      </nav>
+      <Nav />
     </header>
   );
 };
