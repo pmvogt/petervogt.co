@@ -4,7 +4,7 @@ import { navItems } from '../data/navItems';
 const Header = () => {
   return (
     <header className='pt-8 pb-4 px-7'>
-      <div className='flex items-center w-full pb-0 border-b-2 md:justify-between lg:border-b-0 border-slate-700 lg:pb-0'>
+      <div className='flex items-center w-full pb-4 border-b-2 md:justify-between lg:border-b-0 border-slate-700 lg:pb-0'>
         <ul className='flex flex-col items-start w-full md:flex-row md:items-center md:w-auto'>
           <li className='pr-8 align-middle'>
             <h1 className='font-serif font-semibold text-7 md:text-9 lg:text-11 xl:text-13 tracking-1 md:leading-8 lg:leading-10'>
@@ -53,7 +53,6 @@ const Header = () => {
               strokeLinecap='round'
               strokeLinejoin='round'
             >
-              {' '}
               <path stroke='none' d='M0 0h24v24H0z' />{' '}
               <path d='M5 7l5 5l-5 5' />{' '}
               <line x1='12' y1='19' x2='19' y2='19' />
@@ -73,7 +72,7 @@ const Header = () => {
             >
               <Link href={item.path}>
                 <li
-                  className='mr-4 font-sans text-base cursor-pointer tracking-9'
+                  className='mt-4 mr-4 font-sans text-base cursor-pointer tracking-9'
                   key={index}
                 >
                   {item.name}
