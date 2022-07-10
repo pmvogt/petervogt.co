@@ -58,6 +58,78 @@ export const Light = () => {
   );
 };
 
+export const Terminal = () => {
+  return (
+    <svg
+      className='w-8 h-8 text-slate-900dark:text-eggshell-50'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      strokeWidth='2'
+      stroke='currentColor'
+      fill='none'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    >
+      <motion.path
+        initial={{
+          opacity: 0,
+          rotate: -45,
+          pathLength: 0,
+        }}
+        animate={{
+          opacity: 1,
+          rotate: 0,
+          pathLength: 1,
+        }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+        stroke='none'
+        d='M0 0h24v24H0z'
+      />
+      <motion.path
+        initial={{
+          opacity: 0,
+          rotate: -45,
+          pathLength: 0,
+        }}
+        animate={{
+          opacity: 1,
+          rotate: 0,
+          pathLength: 1,
+        }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+        d='M5 7l5 5l-5 5'
+      />
+      <motion.line
+        initial={{
+          opacity: 0,
+          rotate: -45,
+          pathLength: 0,
+        }}
+        animate={{
+          opacity: 1,
+          rotate: 0,
+          pathLength: 1,
+        }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+        x1='12'
+        y1='19'
+        x2='19'
+        y2='19'
+      />
+    </svg>
+  );
+};
+
 export const Dribbble = () => {
   return (
     <svg
