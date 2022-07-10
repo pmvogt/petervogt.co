@@ -27,7 +27,8 @@ const Header = () => {
         </ul>
         <div className='flex items-center'>
           <Toggle />
-          <button className='px-8 py-1 text-base leading-5 rounded'>
+          {/* to-do: build terminal toggle as separate component */}
+          <button className='py-1 pl-5'>
             <Terminal />
           </button>
         </div>

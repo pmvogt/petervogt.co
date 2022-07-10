@@ -1,16 +1,20 @@
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useDarkMode } from '../hooks/useDarkMode';
-import React from 'react';
+import { useTheme } from 'next-themes';
 
 import { Dark, Light } from './Icons';
 
 export const Toggle = () => {
-  const [isDark, setIsDark] = useDarkMode();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <motion.button
       className='transition-all duration-150 ease-linear outline-none background-transparent'
-      onClick={() => setIsDark(!isDark)}
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       name='toggle'
     >
       <motion.svg
@@ -33,7 +37,7 @@ export const Toggle = () => {
           ease: 'easeInOut',
         }}
       >
-        {isDark ? <Dark /> : <Light />}
+        {theme === 'dark' ? <Dark /> : <Light />}
       </motion.svg>
     </motion.button>
   );

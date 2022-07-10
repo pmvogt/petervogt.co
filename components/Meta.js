@@ -14,8 +14,8 @@ const Meta = ({ title }) => {
 
 export default Meta;
 
-// let's set a default title
 Meta.defaultProps = {
   title: 'PressBlog - Your one stop blog for everything React Native',
-  bg: '../../public/mesh-portrait-1.png',
+  bg: '../../public/mesh-portrait-5.svg',
+  darkBg: '../../public/mesh-portrait-1.png',
 };

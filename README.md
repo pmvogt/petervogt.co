@@ -1,34 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal site + portfolio - Peter Vogt
 
-## Getting Started
+This is the latest version of my portfolio site. It's here to demonstrate some of my competencies and experience in sotware design and development and serves as a small-scope personal blog.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Planned, designed, and meticulously pixel-pushed with [Figma](https://figma.com) using a design system I created for personal projects for myself, [Hoxton](https://www.figma.com/proto/rmbjZK4XXjbzlP4eNVhpdE/Hoxton---Tokens-%26-Primitives?node-id=172%3A282).
+- [NextJS](https://nextjs.org/docs/getting-started) provides the bundling, static page generation and deployed/hosted using [Vercel](https://vercel.com).
+- [Tailwind](https://tailwindcss.com) powers all of the styling, with a config file extended to match my design system tokens + primitives.
+- Animation effects were made using [framer-motion](https://www.framer.com/docs/introduction/) which has been used for animations in almost every React project I've ever made.
+- [MDX](https://mdxjs.com/) is used in content pages, which allows for a consistent and easy writing experience with the capabilities of JSX built in.
