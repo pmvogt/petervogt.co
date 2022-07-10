@@ -4,6 +4,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '599px',
@@ -470,8 +471,10 @@ module.exports = {
       backgroundImage: {
         'gradient-dark':
           'linear-gradient(180deg, #150923 0%, #130F2F 0.10%, #150923 100%)',
-        'mp-1': "url('/mesh-portrait-1.png')",
+        'gradient-light':
+          'radial-gradient(105.68% 45.69% at 92.95% 50%, rgba(103, 232, 249, 0.5) 0%, rgba(153, 246, 228, 0.095) 53.91%, rgba(245, 208, 254, 0.3) 100%), radial-gradient(103.18% 103.18% at 90.11% 102.39%, #C9FFF2 0%, rgba(230, 255, 250, 0.2) 100%), radial-gradient(90.45% 90.45% at 87.84% 9.55%, rgba(255, 210, 245, 0.29) 0%, rgba(254, 219, 246, 0.4) 100%), linear-gradient(135.66deg, rgba(203, 185, 255, 0.8) 14.89%, rgba(216, 202, 254, 0) 74.33%)',
         'm-dark': "url('/bg-mesh-dark.png')",
+        'mp-1': "url('/mesh-portrait-1.png')",
         'ml-1': "url('/mesh-landscape-1.png')",
       },
       gridTemplateRows: {

@@ -1,6 +1,6 @@
 import { getWorkPosts } from '../scripts/utils';
-import Meta from '../components/Meta';
 
+import Meta from '../components/Meta';
 import WorkItem from '../components/WorkItem';
 import Layout from '../components/layouts/Layout';
 
