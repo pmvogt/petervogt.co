@@ -1,26 +1,20 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-import {
-  pathInitial,
-  pathAnimate,
-  pathTransition,
-  pathTransitionLong,
-  pathTransitionLonger,
-} from '../data/animations';
+import { animations } from '../data/animations';
 
 export const Dark = () => {
   return (
     <>
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
         stroke='none'
         d='M0 0h24v24H0z'
       />
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
         d='M16.2 4a9.03 9.03 0 1 0 3.9 12a6.5 6.5 0 1 1 -3.9 -12'
       />
     </>
@@ -30,8 +24,8 @@ export const Dark = () => {
 export const Light = () => {
   return (
     <motion.path
-      initial={pathInitial}
-      animate={pathAnimate}
+      initial={animations.pathInitial}
+      animate={animations.pathAnimate}
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth='2'
@@ -54,22 +48,22 @@ export const Terminal = () => {
       strokeLinejoin='round'
     >
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransition}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransition}
         stroke='none'
         d='M0 0h24v24H0z'
       />
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransition}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransition}
         d='M5 7l5 5l-5 5'
       />
       <motion.line
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransition}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransition}
         x1='12'
         y1='19'
         x2='19'
@@ -91,17 +85,17 @@ export const Dribbble = () => {
       strokeLinejoin='round'
     >
       <motion.circle
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransition}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransitionLong}
         cx='12'
         cy='12'
         r='10'
       />
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransitionLong}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransitionLong}
         d='M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32'
       />
     </motion.svg>
@@ -123,33 +117,33 @@ export const Figma = () => {
       strokeLinejoin='round'
     >
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransition}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransition}
         d='M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z'
       />
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransition}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransitionLong}
         d='M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z'
       />
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransition}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransition}
         d='M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z'
       />
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransitionLong}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransitionLong}
         d='M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z'
       />
       <motion.path
-        initial={pathInitial}
-        animate={pathAnimate}
-        transition={pathTransitionLonger}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransitionLong}
         d='M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z'
       />
     </motion.svg>

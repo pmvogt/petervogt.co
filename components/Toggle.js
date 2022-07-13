@@ -8,8 +8,11 @@ export const Toggle = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // check if components are mounted to avoid hydration errors while theme switching
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
+
+  const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <motion.button
@@ -37,7 +40,7 @@ export const Toggle = () => {
           ease: 'easeInOut',
         }}
       >
-        {theme === 'dark' ? <Dark /> : <Light />}
+        {currentTheme === 'dark' ? <Light /> : <Dark />}
       </motion.svg>
     </motion.button>
   );
