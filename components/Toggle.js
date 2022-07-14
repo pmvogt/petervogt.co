@@ -13,7 +13,8 @@ export const Toggle = () => {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  // const currentTheme = theme === 'system' ? systemTheme : theme;
+  const currentTheme = theme;
 
   return (
     <motion.button

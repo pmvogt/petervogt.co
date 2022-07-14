@@ -33,7 +33,7 @@ const WorkHeader = ({ workPost, headerBg, postTitle }) => {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  // const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <header
