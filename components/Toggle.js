@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 
+import { animations } from '../data/animations';
 import { Dark, Light } from './Icons';
 
 export const Toggle = () => {
@@ -25,20 +26,9 @@ export const Toggle = () => {
         fill='none'
         viewBox='0 0 24 24'
         stroke='currentColor'
-        initial={{
-          opacity: 0,
-          rotate: -45,
-          pathLength: 0,
-        }}
-        animate={{
-          opacity: 1,
-          rotate: 0,
-          pathLength: 1,
-        }}
-        transition={{
-          duration: 1,
-          ease: 'easeInOut',
-        }}
+        initial={animations.pathInitial}
+        animate={animations.pathAnimate}
+        transition={animations.pathTransition}
       >
         {currentTheme === 'dark' ? <Light /> : <Dark />}
       </motion.svg>

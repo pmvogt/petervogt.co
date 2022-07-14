@@ -1,11 +1,13 @@
-import Header from '../Header';
+import WorkHeader from '../WorkHeader';
 
-const WorkLayout = ({ children }) => {
+const WorkLayout = ({ children, headerBg, postTitle }) => {
   return (
-    <div className='min-h-screen min-w-screen bg-gradient-dark text-eggshell-50'>
-      <Header />
-      <article>{children}</article>
-    </div>
+    <>
+      <WorkHeader headerBg={headerBg} postTitle={postTitle} />
+      <div className='min-h-screen bg-cover min-w-screen bg-gradient-light dark:bg-gradient-dark '>
+        <article className='container-xl'>{children}</article>
+      </div>
+    </>
   );
 };
 

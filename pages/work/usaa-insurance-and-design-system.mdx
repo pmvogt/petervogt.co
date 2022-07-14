@@ -6,34 +6,38 @@ darkBg: '/mesh-portrait-1.png'
 bg: '/mesh-portrait-5.png'
 ---
 
-import WorkLayout from '../../components/layouts/WorkLayout.js';
+import WorkLayout from '../../components/layouts/WorkLayout';
 import Meta from '../../components/Meta.js';
-import Tooltip from '@reach/tooltip';
-import '@reach/tooltip/styles.css';
+import SectionDivider from '../../components/SectionDivider';
 
-<WorkLayout>
-<Meta title='What is React Native - PressBlog' />
+<WorkLayout headerBg="/mesh-landscape-1.png" postTitle="USAA Insurance & Design System">
+<Meta title='USAA Insurance & Design System' />
 
-# USAA Insurance & Design System
+<SectionDivider>Team</SectionDivider>
 
-React Native is a lovely language
+<div className="container px-7">
+ 
+## Summary
 
-<Tooltip label="It's not actually a language though">
-  <button>Fact about React native</button>
-</Tooltip>
+USAA is a Fortune 100 financial services provider (primarily banking and insurance) for veterans and active US military, and their family members. They are headquartered in San Antonio, Texas USA. I worked in the Plano, Texas office until March 2020 and have been full-time remote since.
 
-### React Native App Example:
+<br />
+Since 2019, I've been supporting USAA's insurance line of business. The first project
+I joined was codenamed Apollo, an IoT command and control native app for policyholding
+USAA members. After the project was shuttered early on in development, I moved on
+to co-owning the design effort for an internal compliance tracker web app with Lead
+Designer Josh Boyd, and have flexed across USAA design teams in various user research
+and "art of the possible" type efforts for VP and C level executives in USAA Insurance.
+<br />
+I've also contributed to the USAA design system and UI component library, with both
+design and development assets in production. I am a firm believer in community maintained
+design systems and it's important to me that designers can help shape their design
+system rather than simply be burdened by the constraints of it in a scaled design
+org.
+<br />
+</div>
+## USAA Connected Home
 
-```js
-const App = () => {
-  return (
-    <View>
-      <Text>Hello World Example</Text>
-    </View>
-  );
-};
-
-export default App;
-```
+<SectionDivider>Team</SectionDivider>
 
 </WorkLayout>
