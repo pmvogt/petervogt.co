@@ -40,7 +40,7 @@ const WorkHeader = ({ workPost, headerBg, postTitle }) => {
       style={{
         backgroundImage: `url(${`${headerBg}`})`,
       }}
-      className='flex flex-col items-start w-full py-4 bg-cover px-7'
+      className='flex flex-col items-start w-full py-4 bg-center bg-cover px-7'
     >
       <BackButton />
       <h1 className='font-serif font-semibold text-4 md:text-9 lg:text-11 xl:text-13 tracking-1 md:leading-8 lg:leading-10 text-slate-900 dark:text-eggshell-50'>

@@ -9,35 +9,94 @@ bg: '/mesh-portrait-5.png'
 import WorkLayout from '../../components/layouts/WorkLayout';
 import Meta from '../../components/Meta.js';
 import SectionDivider from '../../components/SectionDivider';
+import Image from 'next/image';
+
+import ch from '../../public/work/usaa/connected-home.png';
+import ch2 from '../../public/work/usaa/ch2.jpg';
 
 <WorkLayout headerBg="/mesh-landscape-1.png" postTitle="USAA Insurance & Design System">
 <Meta title='USAA Insurance & Design System' />
 
-<SectionDivider>Team</SectionDivider>
+<SectionDivider>
+  <p className='py-0'>**Timeframe**: 2019 - Current</p>
+  <p className='mt-3'>**Role**: Sr. Designer, Design Technologist</p>
+</SectionDivider>
+
+## Summary
 
 <div className="container px-7">
- 
-## Summary
 
 USAA is a Fortune 100 financial services provider (primarily banking and insurance) for veterans and active US military, and their family members. They are headquartered in San Antonio, Texas USA. I worked in the Plano, Texas office until March 2020 and have been full-time remote since.
 
 <br />
+
 Since 2019, I've been supporting USAA's insurance line of business. The first project
 I joined was codenamed Apollo, an IoT command and control native app for policyholding
 USAA members. After the project was shuttered early on in development, I moved on
 to co-owning the design effort for an internal compliance tracker web app with Lead
 Designer Josh Boyd, and have flexed across USAA design teams in various user research
 and "art of the possible" type efforts for VP and C level executives in USAA Insurance.
+
 <br />
+
 I've also contributed to the USAA design system and UI component library, with both
 design and development assets in production. I am a firm believer in community maintained
 design systems and it's important to me that designers can help shape their design
 system rather than simply be burdened by the constraints of it in a scaled design
 org.
+
 <br />
+
 </div>
 ## USAA Connected Home
 
-<SectionDivider>Team</SectionDivider>
+<SectionDivider>
+  <div className='flex justify-start'>
+    <p className='mr-4'>**Team**</p>
+    <ul>
+      <li>Josh Boyd - Lead Designer</li>
+      <li>Sarah Xiong, Mike Parra, Kate Chaparro - Designer</li>
+      <li>Peter Vogt - Designer, Design Technologist</li>
+    </ul>
+  </div>
+</SectionDivider>
+
+<div className="container px-7">
+
+<Image
+  src={ch}
+  alt-text='Picture of USAA connected home production design assets'
+  placeholder='blur'
+  width={600}
+  height={300}
+/>
+
+USAA Connected Home was initially a very large effort. A designer was allocated for both Android and iOS platforms on our team, and one of my responsibilties was conducting research with the native designers and testing the team's conclusions against prototypes I built in React Native. Additionally, I contributed to shoring up communication barriers between designers and developers and creating a pattern library for USAA Connected Home extended from the official USAA design system.
+
+<br />
+
+### Problem Spaces
+
+<Image
+  src={ch2}
+  alt-text='Picture of USAA connected home production design assets'
+  placeholder='blur'
+  width={600}
+  layout='responsive'
+/>
+
+<br />
+
+- Privacy - how might we operate in a transparency-first model in regard to
+  telemetric data collection?
+- Compliance - how might we ensure the Connected Home
+  enrollment process is thoroughly in compliance with state and federal laws in member
+  states, and how do we communicate that without overwhelming the member?
+- Breadth of liability - how might we communicate the proper level of localized risk - flooding,
+  wildfires, etc - to members?
+- Multiple policies - how might we account for members
+  with several homeowner policies?
+
+</div>
 
 </WorkLayout>
