@@ -6,6 +6,15 @@ darkBg: '/mesh-portrait-1.png'
 bg: '/mesh-portrait-5.png'
 ---
 
+export const workPost = {
+    postTitle: 'USAA Insurance & Design System',
+    publishedOn: 'January, 9th. 2022',
+    excerpt: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
+    darkBg: '/mesh-portrait-1.png',
+    headerBg: '/mesh-portrait-1.png',
+    bg: '/mesh-portrait-5.png'
+};
+
 import WorkLayout from '../../components/layouts/WorkLayout';
 import Meta from '../../components/Meta.js';
 import SectionDivider from '../../components/SectionDivider';
@@ -14,7 +23,8 @@ import Image from 'next/image';
 import ch from '../../public/work/usaa/connected-home.png';
 import ch2 from '../../public/work/usaa/ch2.jpg';
 
-<WorkLayout headerBg="/mesh-landscape-1.png" postTitle="USAA Insurance & Design System">
+# {workPost.postTitle}
+<WorkLayout {...workPost}>
 <Meta title='USAA Insurance & Design System' />
 
 <SectionDivider>
