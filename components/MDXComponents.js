@@ -1,6 +1,8 @@
 import styles from '../styles/Markdown.module.css';
+import CustomImage from './CustomImage';
 
 const MDXComponents = {
+  CustomImage,
   p: (props) => (
     <p {...props} className='text-lg text-slate-900 dark:text-eggshell-50' />
   ),

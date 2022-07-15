@@ -7,12 +7,13 @@ bg: '/mesh-portrait-5.png'
 ---
 
 export const workPost = {
-    postTitle: 'USAA Insurance & Design System',
-    publishedOn: 'January, 9th. 2022',
-    excerpt: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
-    darkBg: '/mesh-portrait-1.png',
-    headerBg: '/mesh-portrait-1.png',
-    bg: '/mesh-portrait-5.png'
+  postTitle: 'USAA Insurance & Design System',
+  publishedOn: 'January, 9th. 2022',
+  excerpt:
+    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
+  darkBg: '/mesh-portrait-1.png',
+  headerBg: '/mesh-portrait-1.png',
+  bg: '/mesh-portrait-5.png',
 };
 
 import WorkLayout from '../../components/layouts/WorkLayout';
@@ -20,10 +21,13 @@ import Meta from '../../components/Meta.js';
 import SectionDivider from '../../components/SectionDivider';
 import Image from 'next/image';
 
+import CustomImage from '../../components/CustomImage';
+
 import ch from '../../public/work/usaa/connected-home.png';
 import ch2 from '../../public/work/usaa/ch2.jpg';
 
 # {workPost.postTitle}
+
 <WorkLayout {...workPost}>
 <Meta title='USAA Insurance & Design System' />
 
@@ -73,12 +77,11 @@ org.
 
 <div className="container px-7">
 
-<Image
-  src={ch}
-  alt-text='Picture of USAA connected home production design assets'
-  placeholder='blur'
-  width={600}
-  height={300}
+<CustomImage
+  url='/work/usaa/ch2.jpg'
+  alt='blog post cover'
+  width={700}
+  height={320}
 />
 
 USAA Connected Home was initially a very large effort. A designer was allocated for both Android and iOS platforms on our team, and one of my responsibilties was conducting research with the native designers and testing the team's conclusions against prototypes I built in React Native. Additionally, I contributed to shoring up communication barriers between designers and developers and creating a pattern library for USAA Connected Home extended from the official USAA design system.
@@ -86,14 +89,6 @@ USAA Connected Home was initially a very large effort. A designer was allocated 
 <br />
 
 ### Problem Spaces
-
-<Image
-  src={ch2}
-  alt-text='Picture of USAA connected home production design assets'
-  placeholder='blur'
-  width={600}
-  layout='responsive'
-/>
 
 <br />
 

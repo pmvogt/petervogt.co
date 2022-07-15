@@ -21,7 +21,7 @@ export default function Home({ props, workPosts }) {
     <Layout>
       <Header />
       <Meta />
-      <main className='mt-4 container-xl'>
+      <main className='mt-4'>
         <div className='grid w-full gap-8 px-7 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-8 lg:gap-11'>
           {workPosts.map((workPost) => (
             <WorkItem key={workPost.slug} workPost={workPost} />
