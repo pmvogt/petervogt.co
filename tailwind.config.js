@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     screens: {
@@ -391,13 +388,7 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: [
-        '"Playfair Display"',
-        'Cambria',
-        '"Times New Roman"',
-        'Times',
-        'serif',
-      ],
+      serif: ['"Playfair Display"', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
         'Fira Code',
         'SFMono-Regular',
@@ -469,13 +460,26 @@ module.exports = {
         '4/3': '4 / 3',
       },
       backgroundImage: {
-        'gradient-dark':
-          'linear-gradient(180deg, #150923 0%, #130F2F 0.10%, #150923 100%)',
+        'gradient-dark': 'linear-gradient(180deg, #150923 0%, #130F2F 0.10%, #150923 100%)',
         'gradient-light':
           'radial-gradient(105.68% 45.69% at 92.95% 50%, rgba(103, 232, 249, 0.5) 0%, rgba(153, 246, 228, 0.095) 53.91%, rgba(245, 208, 254, 0.3) 100%), radial-gradient(103.18% 103.18% at 90.11% 102.39%, #C9FFF2 0%, rgba(230, 255, 250, 0.2) 100%), radial-gradient(90.45% 90.45% at 87.84% 9.55%, rgba(255, 210, 245, 0.29) 0%, rgba(254, 219, 246, 0.4) 100%), linear-gradient(135.66deg, rgba(203, 185, 255, 0.8) 14.89%, rgba(216, 202, 254, 0) 74.33%)',
         'm-dark': "url('/bg-mesh-dark.png')",
-        'mp-1': "url('/mesh-portrait-1.png')",
-        'ml-1': "url('/mesh-landscape-1.png')",
+        'mesh-p-1': "url('/mesh/mesh-portrait-1.png')",
+        'mesh-p-2': "url('/mesh/mesh-portrait-2.png')",
+        'mesh-p-3': "url('/mesh/mesh-portrait-3.png')",
+        'mesh-p-4': "url('/mesh/mesh-portrait-4.png')",
+        'mesh-p-5': "url('/mesh/mesh-portrait-5.png')",
+        'mesh-p-6': "url('/mesh/mesh-portrait-6.png')",
+        'mesh-p-7': "url('/mesh/mesh-portrait-7.png')",
+        'mesh-p-8': "url('/mesh/mesh-portrait-8.png')",
+        'mesh-l-1': "url('/mesh/mesh-landscape-1.png')",
+        'mesh-l-2': "url('/mesh/mesh-landscape-2.png')",
+        'mesh-l-3': "url('/mesh/mesh-landscape-3.png')",
+        'mesh-l-4': "url('/mesh/mesh-landscape-4.png')",
+        'mesh-l-5': "url('/mesh/mesh-landscape-5.png')",
+        'mesh-l-6': "url('/mesh/mesh-landscape-6.png')",
+        'mesh-l-7': "url('/mesh/mesh-landscape-7.png')",
+        'mesh-l-8': "url('/mesh/mesh-landscape-8.png')",
       },
       gridTemplateRows: {
         card: 'minmax(min-content, max-content)',
@@ -493,4 +497,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}

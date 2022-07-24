@@ -3,22 +3,27 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  html,
+  body {
     font-family: Inter, system-ui, sans-serif;
-    font-size: 14px;
+    height: 100%;
   }
 }
 
-a {
-  color: inherit;
-  text-decoration: underline transparent;
-  transition: 0.25s ease-in-out;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+html,
+.lightbox-overlay {
+  /* margin-left: calc(100vw - 100%); */
+  width: 100vw;
 }
 
-a:hover {
-  text-decoration-color: currentColor;
+html.prevent-scroll {
+  overflow-y: hidden;
 }
-
-p {
-  line-height: 1.6;
+html.lightbox-loading,
+html.lightbox-loading * {
+  cursor: wait !important;
 }

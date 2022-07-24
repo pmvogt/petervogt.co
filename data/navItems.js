@@ -1,4 +1,4 @@
-export const navItems = [
+const navItems = [
   { name: 'Work', path: '/' },
   {
     name: 'Writing',
@@ -8,4 +8,6 @@ export const navItems = [
     name: 'About',
     path: '/about',
   },
-];
+]
+
+export default navItems

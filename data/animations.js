@@ -17,8 +17,4 @@ export const animations = {
     duration: 2,
     ease: 'easeInOut',
   },
-  pathTransitionLong: {
-    duration: 3,
-    ease: 'easeInOut',
-  },
 };

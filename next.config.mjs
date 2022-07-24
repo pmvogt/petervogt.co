@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import remarkFrontmatter from 'remark-frontmatter';
 import rehypeHighlight from 'rehype-highlight';
 

@@ -1,56 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { useRouter } from 'next/router';
-import { useTheme } from 'next-themes';
+import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import { useTheme } from 'next-themes'
+import { motion, useScroll } from 'framer-motion'
 
-const BackButton = () => {
-  const router = useRouter();
-
-  return (
-    <button type='button' onClick={() => router.back()}>
-      <svg
-        className='w-8 h-8 dark:text-eggshell-50 text-slate-900'
-        fill='none'
-        viewBox='0 0 24 24'
-        stroke='currentColor'
-      >
-        <path
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          strokeWidth='2'
-          d='M10 19l-7-7m0 0l7-7m-7 7h18'
-        />
-      </svg>
-    </button>
-  );
-};
+import BackButton from './BackButton'
+const headerVariants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+}
 
 const WorkHeader = ({ workPost, headerBg, postTitle }) => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { scrollY } = useScroll()
+  const [hidden, setHidden] = useState(false)
 
-  // check if components are mounted to avoid hydration errors while theme switching
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
+  function update() {
+    if (scrollY?.current < scrollY?.prev) {
+      setHidden(false)
+    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+      setHidden(true)
+    }
+  }
+
+  /** update the onChange callback to call for `update()` **/
+  useEffect(() => {
+    return scrollY.onChange(() => update())
+  })
 
   return (
-    <header
-      style={{
-        backgroundImage: `url(${`${headerBg}`})`,
-      }}
-      className='flex flex-col items-start w-full py-4 bg-center bg-cover px-7'
+    <motion.header
+      className="flex w-full items-center justify-between border-b border-slate-700/50 bg-mesh-l-5 bg-cover bg-center p-4 dark:border-slate-100/50 dark:bg-mesh-l-1"
+      variants={headerVariants}
+      animate={hidden ? 'hidden' : 'visible'}
+      transition={{ easeInOut: [0.1, 0.25, 0.3, 1], duration: 0.2 }}
     >
-      <BackButton />
-      <h1 className='font-serif font-semibold text-4 md:text-9 lg:text-11 xl:text-13 tracking-1 md:leading-8 lg:leading-10 text-slate-900 dark:text-eggshell-50'>
-        {postTitle}
-      </h1>
-    </header>
-  );
-};
+      <div className="flex h-full w-full items-center pl-4 lg:py-4">
+        <BackButton />
+        <h1 className="ml-4 font-serif text-xl font-semibold leading-3 md:text-7 md:leading-5">
+          {postTitle}
+        </h1>
+      </div>
+    </motion.header>
+  )
+}
 
 WorkHeader.propTypes = {
   bg: PropTypes.string,
   postTitle: PropTypes.string,
-};
+}
 
-export default WorkHeader;
+export default WorkHeader
