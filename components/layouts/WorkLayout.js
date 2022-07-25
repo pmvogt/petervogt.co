@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { AnimatePresence, motion, useScroll } from 'framer-motion'
-
-import Link from '../Link'
-import ThemeSwitch from '../ThemeSwitch'
+import { throttle } from 'lodash'
 import WorkHeader from '../WorkHeader'
-import { Nav } from '../Nav.js'
 import CompactNav from '../CompactNav'
 
 const WorkLayout = ({ children, headerBg, postTitle }) => {
   const { scrollY } = useScroll()
   const [hidden, setHidden] = useState(false)
 
-  function update() {
-    if (scrollY?.current < scrollY?.prev) {
-      setHidden(false)
-    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
-      setHidden(true)
-    }
-  }
+  const update = useMemo(
+    () =>
+      throttle(() => {
+        if (scrollY?.current < scrollY?.prev) {
+          setHidden(false)
+        } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+          setHidden(true)
+        }
+      }, 100),
+    []
+  )
 
   const headerVariants = {
     visible: { opacity: 1 },

@@ -29,7 +29,6 @@ export const ThemeSwitch = () => {
         stroke="currentColor"
         initial={animations.pathInitial}
         animate={animations.pathAnimate}
-        transition={animations.pathTransition}
       >
         {currentTheme === 'dark' ? <Light /> : <Dark />}
       </motion.svg>

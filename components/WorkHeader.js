@@ -7,8 +7,8 @@ import BackButton from './BackButton'
 const WorkHeader = ({ postTitle }) => {
   return (
     <AnimatePresence>
-      <motion.header className="flex w-full items-center border-b border-slate-700/50 bg-mesh-l-5 bg-cover bg-center px-4 py-3  dark:border-slate-100/50 dark:bg-mesh-l-1">
-        <motion.div className="container mx-auto flex h-full w-full items-center pl-4 lg:py-1">
+      <motion.header className="flex w-full items-center border-b border-slate-700/50 bg-mesh-l-5 bg-cover bg-center py-4  dark:border-slate-100/50 dark:bg-mesh-l-1">
+        <motion.div className="container mx-auto flex  w-full items-center pl-4 lg:py-1">
           <BackButton />
           <motion.h1 className="ml-4 font-serif text-xl font-semibold leading-3 md:text-7 md:leading-5">
             {postTitle}

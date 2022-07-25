@@ -6,9 +6,87 @@ bg: '/mesh/mesh-portrait-6.png'
 darkBg: '/mesh/mesh-portrait-2.png'
 ---
 
-import Meta from '../../components/Meta'
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@reach/disclosure'
+export const workPost = {
+  postTitle: 'Reimagining the Nevada Independent',
+  publishedOn: 'January, 9th. 2022',
+  excerpt:
+    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
+  darkBg: '/public/mesh/mesh-portrait-2.png',
+  headerBg: '/public/mesh/mesh-portrait-2.png',
+  bg: '/public/mesh/mesh-portrait-6.png',
+}
 
+import Meta from '../../components/Meta'
+import WorkLayout from '../../components/layouts/WorkLayout'
+
+<WorkLayout {...workPost}>
 <Meta title="Reimagining the Nevada Independent" />
 
-# React Navigation Tutorial
+# Reimagining the Nevada Independent
+
+Timeframe: 2018-2020
+Role: Designer & UI Engineer
+
+## Summary & Context
+
+The Nevada Independent are a nonprofit journalism outlet that cover news - political news especially - in the state of Nevada. In a time where media conglomorates dominate most of the external news voices we hear every day, they have been a key emerging news outlet in the political space. The Indy web platform - which averages about 500k hits a month - was built and is maintained by just one person, who happens to be my best friend CJ Keeney (also CTO at Pigeonly when I worked there).
+
+It's really an honor to work with him, Jon Ralston, and the rest of the crew at the Indy which I have been privileged to do on a part-time basis over the course of several years. Our [Presidential Candidate Visit Tracker](https://projects.thenevadaindependent.com/election/2020/candidate-tracker) won the first place award for digital innovation in 2019 from the Nevada Press Association (and second place in 2020).
+
+With input, direction, and content coming from the journalists and editors, CJ and I build TNI's web experiences out together. There's no big infra or UX team or $500/hr consultants driving the design and development. It's just the homie and I. I am very proud of this.
+
+In 2020 we re-designed the site from the ground up with a focus on improving readability, navigation, discovery, and information architecture. It was the first time since the site was launched in 2016.
+
+### Problem spaces:
+
+- **Focus** How might we refactor the IA and organization of elements across The Indy's web platform in a way that places a focus on the journalistic content, and doesn't bog down readers with peripheral features? The original site was designed by a small firm in Las Vegas when the site first launched. Over time, with scale and the constraints of a very small team, things started to become muddled.
+
+img
+
+Times change and needs evolve. When the team added a new fundraising medium, a new podcast, or a category of reporting - say, when Nevada legalized cannabis - these new things were largely dropped into the homepage somewhere. What once was a well-suited design to a very small independent news outlet became stretched very thin over time.
+
+- **Consistency** How might we bring visual consistency and readability to a web platform that was built without a very rigorous approach to typography, layout, and color? At the time the re-design had started, I had counted over 100 unique type styles and color combinations across the site:
+
+- **Navigation** How might we get away from dumping "all of the things" onto the homepage, and letting the reader figure it out? Can we feature people?
+
+### The Landscape
+
+I first looked at different news orgs across the web to glean the design strengths of other publications' homepages:
+
+![[competitiveland.png]]
+
+It was clear to me that many of these publications' digital presence reflected their legacies as a front page newspaper. This made sense: the "front page of the paper" layout paradigm had been leveraged since newspapers had been around. People were familiar with it, and one could argue that the front page of a news platform is largely a solved problem. This is also evident in the fact that outlets like Politico and The Hill, who never had print mediums, borrowed much of the same front page layout:
+
+img
+
+It felt like The Indy had a huge opportunity area here. There was lots of incredible, award-winning content by the team that was being obscured by a sidebar nav with a "junk drawer" type approach, and a massive feature story cover image.
+
+img
+
+#### Re-focusing article navigation
+
+The early iterations focused on consolidating the layout into a column format that maximized the emphasis on editorial content, and organized them in a more newspaper-esque frontpage. I also explored two different navigational concepts: keeping the familiar sidebar - with the addition of top level news categories in the header - or obscuring all of the categories behind a mega menu dropdown.
+
+img
+
+I ran a small structured survey of around 20 readers that concluded:
+
+**70%** of readers surveyed did not feel comfortable navigating articles exclusively through a megamenu dropdown, and preferred some form of visible category links on tablet + desktop
+
+**90%** of readers surveyed were comfortable with navigating articles exclusively through a dropdown on mobile devices
+
+So the lines drawn were pretty clear. Our main navigation would be delievered through a mega menu exclusively on mobile, but would be augmented by exposed links on tablet+.
+
+#### Creating a design system
+
+It was a big priority for me to get The Indy in a place where they had a foundation-level design system to work with. Often times, the team would discuss adding features in a very ad hoc "Make this card a big bold color" way, and I really wanted to get them to a shared design language.
+
+img
+
+img
+
+img
+
+#### Final result
+
+</WorkLayout>

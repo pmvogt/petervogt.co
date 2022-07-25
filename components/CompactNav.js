@@ -5,8 +5,8 @@ import { ThemeSwitch } from './ThemeSwitch'
 
 export const CompactNav = () => {
   return (
-    <nav className="container mx-auto flex w-full justify-between bg-mint-300/40 px-4 py-4 backdrop-blur dark:bg-indigoDark-900/10">
-      <ul className="flex">
+    <nav className="container mx-auto flex w-full justify-between bg-mint-300/10 p-4 backdrop-blur dark:bg-indigoDark-900/10">
+      <ul className="flex w-full">
         {navItems.map((item, index) => {
           return (
             <Link href={item.path} key={index}>
