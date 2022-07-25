@@ -1,6 +1,6 @@
 import { React } from 'react'
 
-import { Toggle } from './ThemeSwitch'
+import { ThemeSwitch } from './ThemeSwitch'
 import { Nav } from './Nav'
 import { Terminal } from './Icons'
 
@@ -26,7 +26,7 @@ const Header = () => {
           </li>
         </ul>
         <div className="flex items-center">
-          <Toggle />
+          <ThemeSwitch />
           {/* to-do: build terminal toggle as separate component */}
           <button className="py-1 pl-5">
             <Terminal />
