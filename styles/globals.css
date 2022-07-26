@@ -8,6 +8,12 @@
     font-family: Inter, system-ui, sans-serif;
     height: 100%;
   }
+  a {
+    background-image: linear-gradient(to top, mint, violet, transparent);
+    background-position: 0 110%;
+    background-repeat: no-repeat;
+    background-size: auto 0.75rem;
+  }
 }
 
 html {

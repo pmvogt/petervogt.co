@@ -17,7 +17,7 @@ const WorkLayout = ({ children, headerBg, postTitle }) => {
           setHidden(true)
         }
       }, 100),
-    []
+    [scrollY]
   )
 
   const headerVariants = {
@@ -37,9 +37,16 @@ const WorkLayout = ({ children, headerBg, postTitle }) => {
           {hidden ? (
             <CompactNav />
           ) : (
-            <motion.div transition={{ easeInOut: [0.1, 0.25, 0.3, 1], duration: 0.2 }} layout>
-              <WorkHeader headerBg={headerBg} postTitle={postTitle} />
-            </motion.div>
+            <AnimatePresence>
+              <motion.div
+                initial="visible"
+                animate="hidden"
+                transition={{ easeInOut: [0.1, 0.25, 0.3, 1], duration: 0.2 }}
+                layout
+              >
+                <WorkHeader headerBg={headerBg} postTitle={postTitle} />
+              </motion.div>
+            </AnimatePresence>
           )}
         </div>
         <article className="container mx-auto px-8 py-8">{children}</article>

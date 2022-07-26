@@ -1,61 +1,58 @@
-import { useTheme } from 'next-themes';
-import { useState, useEffect, useCallback } from 'react';
+import { useTheme } from 'next-themes'
+import { useState, useEffect, useCallback } from 'react'
 
 const ImageLightbox = ({ src, closeLightbox }) => {
-  const [imgLoaded, setImgLoaded] = useState(false);
-  const [close, setClose] = useState(false);
-  const { theme } = useTheme();
+  const [imgLoaded, setImgLoaded] = useState(false)
+  const [close, setClose] = useState(false)
+  const { theme } = useTheme()
 
   const handleClose = useCallback(() => {
-    setClose(true);
-    document.documentElement.classList.remove(
-      'prevent-scroll',
-      'lightbox-loading'
-    );
+    setClose(true)
+    document.documentElement.classList.remove('prevent-scroll', 'lightbox-loading')
     setTimeout(() => {
-      closeLightbox();
-    }, 300);
-  }, [closeLightbox]);
+      closeLightbox()
+    }, 300)
+  }, [closeLightbox])
 
   const handleKeydown = useCallback(
     (e) => {
-      if (e.key === 'Escape') handleClose();
+      if (e.key === 'Escape') handleClose()
     },
     [handleClose]
-  );
+  )
 
   useEffect(() => {
-    document.documentElement.classList.add('prevent-scroll');
-    window.addEventListener('keydown', handleKeydown);
-    return () => window.removeEventListener('keydown', handleKeydown);
-  }, [handleKeydown]);
+    document.documentElement.classList.add('prevent-scroll')
+    window.addEventListener('keydown', handleKeydown)
+    return () => window.removeEventListener('keydown', handleKeydown)
+  }, [handleKeydown])
 
   useEffect(() => {
     if (imgLoaded) {
       setTimeout(() => {
-        document.documentElement.classList.remove('lightbox-loading');
-      }, 150);
+        document.documentElement.classList.remove('lightbox-loading')
+      }, 150)
     }
-  }, [imgLoaded]);
+  }, [imgLoaded])
 
   return (
     <div
-      className='lightbox-overlay fixed inset-0 z-40 w-full flex items-center justify-center bg-gray-900 transition-opacity duration-300 ease-out'
+      className="lightbox-overlay fixed inset-0 z-40 flex w-full items-center justify-center bg-gray-900 transition-opacity duration-300 ease-out"
       style={{
         '--tw-bg-opacity': theme === 'dark' ? 0.7 : 0.8,
         opacity: !close && imgLoaded ? 1 : 0,
       }}
       onClick={handleClose}
       onKeyDown={handleKeydown}
-      role='button'
+      role="button"
       tabIndex={0}
     >
-      <div className='relative flex h-full w-full items-center justify-center'>
-        <div className='absolute inset-x-0 top-0 flex justify-between'>
-          <button className='text-white p-4 text-xl' onClick={handleClose}>
+      <div className="relative flex h-full w-full items-center justify-center">
+        <div className="absolute inset-x-0 top-0 flex justify-between">
+          <button className="text-white p-4 text-xl" onClick={handleClose}>
             Esc
           </button>
-          <button className='p-4' onClick={handleClose}>
+          <button className="p-4" onClick={handleClose}>
             x
           </button>
         </div>
@@ -63,12 +60,12 @@ const ImageLightbox = ({ src, closeLightbox }) => {
         <img
           src={src}
           onLoad={() => setImgLoaded(true)}
-          className='max-h-[80vh] max-w-[90vw] cursor-[zoom-out] overflow-visible'
-          alt='Lightbox'
+          className="max-h-[80vh] max-w-[90vw] cursor-[zoom-out] overflow-visible"
+          alt="Lightbox"
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ImageLightbox;
+export default ImageLightbox

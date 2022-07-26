@@ -17,4 +17,4 @@ export const animations = {
     duration: 2,
     ease: 'easeInOut',
   },
-};
+}

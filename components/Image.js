@@ -18,7 +18,7 @@ const Image = ({ shouldOpenLightbox = true, ...rest }) => {
   }
   return (
     <>
-      <div className={`relative h-96 w-full rounded-md ${shouldOpenLightbox ? 'cursor-[zoom-in]' : ''}`}>
+      <div className={`relative my-4 h-96 w-full rounded-md ${shouldOpenLightbox ? 'cursor-[zoom-in]' : ''}`}>
         <NextImage {...rest} {...blurData} onClick={handleOpenLightbox} />
       </div>
       {openLightbox ? <ImageLightbox closeLightbox={() => setOpenLightbox(false)} src={rest.src} /> : null}

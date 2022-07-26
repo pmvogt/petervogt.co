@@ -20,9 +20,7 @@ const Header = () => {
             </h2>
           </li>
           <li className="hidden w-full flex-1 border-r border-slate-700/50 py-6 pl-8 pr-8 align-middle dark:border-slate-100/50 xl:block">
-            <h2 className="text-left font-sans text-base font-normal leading-normal">
-              Currently Sr. Designer @ USAA
-            </h2>
+            <h2 className="text-left font-sans text-base font-normal leading-normal">Currently Sr. Designer @ USAA</h2>
           </li>
         </ul>
         <div className="flex items-center">
@@ -34,9 +32,7 @@ const Header = () => {
         </div>
       </div>
 
-      <h2 className="block py-6 lg:hidden">
-        Product Designer & Design Technologist. Currently: Sr. Designer @ USAA
-      </h2>
+      <h2 className="block py-6 lg:hidden">Product Designer & Design Technologist. Currently: Sr. Designer @ USAA</h2>
       <Nav />
     </header>
   )

@@ -1,12 +1,12 @@
-import { getPosts, getWorkPosts } from '../../scripts/utils';
+import { getPosts, getWorkPosts } from '../../scripts/utils'
 
 // handle request to this API route
 export default function handler(req, res) {
-  const { page } = req.query;
+  const { page } = req.query
 
-  const workPosts = getWorkPosts(page);
-  const posts = getPosts(page);
+  const workPosts = getWorkPosts(page)
+  const posts = getPosts(page)
 
-  res.status(200).json(workPosts);
-  res.status(200).json(posts);
+  res.status(200).json(workPosts)
+  res.status(200).json(posts)
 }

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 import navItems from '../data/navItems'
@@ -5,7 +6,7 @@ import { ThemeSwitch } from './ThemeSwitch'
 
 export const CompactNav = () => {
   return (
-    <nav className="container mx-auto flex w-full justify-between bg-mint-300/10 p-4 backdrop-blur dark:bg-indigoDark-900/10">
+    <motion.nav className="container mx-auto flex w-full justify-between bg-mint-300/10 p-4 backdrop-blur dark:bg-indigoDark-900/10">
       <ul className="flex w-full">
         {navItems.map((item, index) => {
           return (
@@ -21,7 +22,7 @@ export const CompactNav = () => {
         })}
       </ul>
       <ThemeSwitch />
-    </nav>
+    </motion.nav>
   )
 }
 

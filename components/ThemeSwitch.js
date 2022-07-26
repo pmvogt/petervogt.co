@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 
 import { animations } from '../data/animations'
@@ -17,21 +17,23 @@ export const ThemeSwitch = () => {
   const currentTheme = theme
 
   return (
-    <motion.button
-      className="background-transparent outline-none transition-all duration-150 ease-linear"
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      name="toggle"
-    >
-      <motion.svg
-        className="h-8 w-8 text-slate-900 dark:text-eggshell-50"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        initial={animations.pathInitial}
-        animate={animations.pathAnimate}
+    <AnimatePresence>
+      <motion.button
+        className="background-transparent outline-none transition-all duration-150 ease-linear"
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        name="toggle"
       >
-        {currentTheme === 'dark' ? <Light /> : <Dark />}
-      </motion.svg>
-    </motion.button>
+        <motion.svg
+          className="h-8 w-8 text-slate-900 dark:text-eggshell-50"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          initial={animations.pathInitial}
+          animate={animations.pathAnimate}
+        >
+          {currentTheme === 'dark' ? <Light /> : <Dark />}
+        </motion.svg>
+      </motion.button>
+    </AnimatePresence>
   )
 }

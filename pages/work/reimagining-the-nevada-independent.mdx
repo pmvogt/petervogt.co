@@ -12,8 +12,8 @@ export const workPost = {
   excerpt:
     'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
   darkBg: '/public/mesh/mesh-portrait-2.png',
-  headerBg: '/public/mesh/mesh-portrait-2.png',
-  bg: '/public/mesh/mesh-portrait-6.png',
+  headerBg: '/public/mesh/mesh-landscape-2.png',
+  bg: '/public/mesh/mesh-portrait-5.png',
 }
 
 import Meta from '../../components/Meta'
@@ -22,16 +22,20 @@ import WorkLayout from '../../components/layouts/WorkLayout'
 <WorkLayout {...workPost}>
 <Meta title="Reimagining the Nevada Independent" />
 
-# Reimagining the Nevada Independent
+<p className="pt-0">**Timeframe**: 2018-2020</p>
+<p className="mt-3">**Role**: Designer, UI Developer</p>
 
-Timeframe: 2018-2020
-Role: Designer & UI Engineer
+## Summary
 
-## Summary & Context
-
-The Nevada Independent are a nonprofit journalism outlet that cover news - political news especially - in the state of Nevada. In a time where media conglomorates dominate most of the external news voices we hear every day, they have been a key emerging news outlet in the political space. The Indy web platform - which averages about 500k hits a month - was built and is maintained by just one person, who happens to be my best friend CJ Keeney (also CTO at Pigeonly when I worked there).
+The Nevada Independent are a nonprofit journalism outlet that cover news - political news especially - in the state of Nevada. In a time where media conglomorates dominate most of the external news voices we hear every day, they have been a key emerging news outlet in the political space. The Indy web platform - which averages about 500k hits a month - was built and is maintained by just one person, who happens to be my close friend CJ Keeney (also CTO at Pigeonly when I worked there).
 
 It's really an honor to work with him, Jon Ralston, and the rest of the crew at the Indy which I have been privileged to do on a part-time basis over the course of several years. Our [Presidential Candidate Visit Tracker](https://projects.thenevadaindependent.com/election/2020/candidate-tracker) won the first place award for digital innovation in 2019 from the Nevada Press Association (and second place in 2020).
+
+<iframe
+  className="my-6 h-96 w-full"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFpiKEnyHCrpOcW3t27CGv4%2F2020-Pres-visit-Tracker%3Fnode-id%3D5465%253A124"
+  allowFullScreen
+></iframe>
 
 With input, direction, and content coming from the journalists and editors, CJ and I build TNI's web experiences out together. There's no big infra or UX team or $500/hr consultants driving the design and development. It's just the homie and I. I am very proud of this.
 
@@ -41,7 +45,7 @@ In 2020 we re-designed the site from the ground up with a focus on improving rea
 
 - **Focus** How might we refactor the IA and organization of elements across The Indy's web platform in a way that places a focus on the journalistic content, and doesn't bog down readers with peripheral features? The original site was designed by a small firm in Las Vegas when the site first launched. Over time, with scale and the constraints of a very small team, things started to become muddled.
 
-img
+<Image src="/work/indy/indyold.png" layout="fill" objectFit="cover" />
 
 Times change and needs evolve. When the team added a new fundraising medium, a new podcast, or a category of reporting - say, when Nevada legalized cannabis - these new things were largely dropped into the homepage somewhere. What once was a well-suited design to a very small independent news outlet became stretched very thin over time.
 
@@ -53,21 +57,19 @@ Times change and needs evolve. When the team added a new fundraising medium, a n
 
 I first looked at different news orgs across the web to glean the design strengths of other publications' homepages:
 
-![[competitiveland.png]]
+<Image src="/work/indy/competitiveland.png" layout="fill" objectFit="cover" />
 
-It was clear to me that many of these publications' digital presence reflected their legacies as a front page newspaper. This made sense: the "front page of the paper" layout paradigm had been leveraged since newspapers had been around. People were familiar with it, and one could argue that the front page of a news platform is largely a solved problem. This is also evident in the fact that outlets like Politico and The Hill, who never had print mediums, borrowed much of the same front page layout:
-
-img
+It was clear to me that many of these publications' digital presence reflected their legacies as a front page newspaper. This made sense: the "front page of the paper" layout paradigm had been leveraged since newspapers had been around. People were familiar with it, and one could argue that the front page of a news platform is largely a solved problem. This is also evident in the fact that outlets like Politico and The Hill, who never had print mediums, borrowed much of the same front page layout.
 
 It felt like The Indy had a huge opportunity area here. There was lots of incredible, award-winning content by the team that was being obscured by a sidebar nav with a "junk drawer" type approach, and a massive feature story cover image.
 
-img
+<Image src="/work/indy/oldheader.png" layout="fill" objectFit="cover" />
 
-#### Re-focusing article navigation
+### Re-focusing article navigation
 
 The early iterations focused on consolidating the layout into a column format that maximized the emphasis on editorial content, and organized them in a more newspaper-esque frontpage. I also explored two different navigational concepts: keeping the familiar sidebar - with the addition of top level news categories in the header - or obscuring all of the categories behind a mega menu dropdown.
 
-img
+<Image src="/work/indy/earlyindy.png" layout="fill" objectFit="cover" />
 
 I ran a small structured survey of around 20 readers that concluded:
 
@@ -77,7 +79,7 @@ I ran a small structured survey of around 20 readers that concluded:
 
 So the lines drawn were pretty clear. Our main navigation would be delievered through a mega menu exclusively on mobile, but would be augmented by exposed links on tablet+.
 
-#### Creating a design system
+### Creating a design system
 
 It was a big priority for me to get The Indy in a place where they had a foundation-level design system to work with. Often times, the team would discuss adding features in a very ad hoc "Make this card a big bold color" way, and I really wanted to get them to a shared design language.
 
@@ -87,6 +89,8 @@ img
 
 img
 
-#### Final result
+### Implementation process
+
+The production-level comps for the TNI re-design were done in Figma. Generally when I work with CJ, the level of comps actually generated in a GUI design tool is pretty low. We'll use it as a baseline for component creation, page layout work, and dive into the code after stakeholder signoff on the Figma project work.
 
 </WorkLayout>

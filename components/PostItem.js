@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 const PostItem = ({ post }) => {
   return (
-    <div className='flex-col p-4 transition duration-500 transform bg-cover rounded cursor-pointer h-108 hover:scale-105 bg-mp-1'>
-      <h3 className='font-serif font-normal text-7 md:text-9 tracking-0 leading-0'>
+    <div className="bg-mp-1 h-108 transform cursor-pointer flex-col rounded bg-cover p-4 transition duration-500 hover:scale-105">
+      <h3 className="leading-0 font-serif text-7 font-normal tracking-0 md:text-9">
         <Link href={`/posts/${post.slug}`}>{post.data.title}</Link>
       </h3>
     </div>
-  );
-};
+  )
+}
 
-export default PostItem;
+export default PostItem
