@@ -13,7 +13,7 @@ export const workPost = {
     'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
   darkBg: '/public/mesh/mesh-portrait-2.png',
   headerBg: '/public/mesh/mesh-landscape-2.png',
-  bg: '/public/mesh/mesh-portrait-5.png',
+  bg: '/public/mesh/mesh-portrait-6.png',
 }
 
 import Meta from '../../components/Meta'
@@ -32,10 +32,12 @@ The Nevada Independent are a nonprofit journalism outlet that cover news - polit
 It's really an honor to work with him, Jon Ralston, and the rest of the crew at the Indy which I have been privileged to do on a part-time basis over the course of several years. Our [Presidential Candidate Visit Tracker](https://projects.thenevadaindependent.com/election/2020/candidate-tracker) won the first place award for digital innovation in 2019 from the Nevada Press Association (and second place in 2020).
 
 <iframe
-  className="my-6 h-96 w-full"
-  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFpiKEnyHCrpOcW3t27CGv4%2F2020-Pres-visit-Tracker%3Fnode-id%3D5465%253A124"
-  allowFullScreen
-></iframe>
+className="my-6 h-96 w-full"
+src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFpiKEnyHCrpOcW3t27CGv4%2F2020-Pres-visit-Tracker%3Fnode-id%3D5465%253A124"
+allowFullScreen
+
+> </iframe>
+*Figma source file for 2020 Presidential Tracker*
 
 With input, direction, and content coming from the journalists and editors, CJ and I build TNI's web experiences out together. There's no big infra or UX team or $500/hr consultants driving the design and development. It's just the homie and I. I am very proud of this.
 
@@ -45,7 +47,7 @@ In 2020 we re-designed the site from the ground up with a focus on improving rea
 
 - **Focus** How might we refactor the IA and organization of elements across The Indy's web platform in a way that places a focus on the journalistic content, and doesn't bog down readers with peripheral features? The original site was designed by a small firm in Las Vegas when the site first launched. Over time, with scale and the constraints of a very small team, things started to become muddled.
 
-<Image src="/work/indy/indyold.png" layout="fill" objectFit="cover" />
+_Original NV Indy site design_
 
 Times change and needs evolve. When the team added a new fundraising medium, a new podcast, or a category of reporting - say, when Nevada legalized cannabis - these new things were largely dropped into the homepage somewhere. What once was a well-suited design to a very small independent news outlet became stretched very thin over time.
 
@@ -63,13 +65,14 @@ It was clear to me that many of these publications' digital presence reflected t
 
 It felt like The Indy had a huge opportunity area here. There was lots of incredible, award-winning content by the team that was being obscured by a sidebar nav with a "junk drawer" type approach, and a massive feature story cover image.
 
-<Image src="/work/indy/oldheader.png" layout="fill" objectFit="cover" />
+<Image src="/work/indy/oldheader.png" height={1120} width={1400} layout="responsive" />
 
-### Re-focusing article navigation
+### Re-focusing navigation
 
 The early iterations focused on consolidating the layout into a column format that maximized the emphasis on editorial content, and organized them in a more newspaper-esque frontpage. I also explored two different navigational concepts: keeping the familiar sidebar - with the addition of top level news categories in the header - or obscuring all of the categories behind a mega menu dropdown.
 
-<Image src="/work/indy/earlyindy.png" layout="fill" objectFit="cover" />
+<Image src="/work/indy/early-indy.png" height={450} width={720} layout="responsive" />
+*Early wires of layout and IA*
 
 I ran a small structured survey of around 20 readers that concluded:
 
@@ -77,20 +80,54 @@ I ran a small structured survey of around 20 readers that concluded:
 
 **90%** of readers surveyed were comfortable with navigating articles exclusively through a dropdown on mobile devices
 
-So the lines drawn were pretty clear. Our main navigation would be delievered through a mega menu exclusively on mobile, but would be augmented by exposed links on tablet+.
+So the lines drawn were pretty clear. Our main navigation would be delievered through a default-hidden mega menu exclusively on mobile, but would be augmented by exposed links on tablet+.
+
+<Image src="/work/indy/nav-comparison.png" height={780} width={1400} layout="responsive" />
+
+<video controls>
+  <source src="/work/indy/search-interaction.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+### A better newsletter subscription manager
+
+One thing I wanted to improve in the Indy's UX was the ability to handle newsletter subscriptions in a graceful way. As is the common pattern, the existing solution was a column of checkboxes in a user admin panel. This would have been _okay_ functionally, but that sort of treatment felt too bland to entice new signups, and it certainly wasn't a pattern that would fit in in the newly re-designed and organized homepage. The goal here was to create both a multiple newsletter sign-up widget that _also_ served as a browser to inform a reader on the plethora of newsletters available.
+
+I thought about the nature of how a form with just checkbox inputs works in this sort of scenario. State can be persisted across an account on an authenticated server of course, but we also could let a user enter their email into an input and check it against the indy newsletter database to return an object of subscriptions they are subscribed to.
+
+In an afternoon jam session, I put together a proof of concept. The editorial staff and CJ both loved the solution, and it's live on the site now as well. The Figma prototype is below.
+
+<iframe
+  className="my-6 h-108 w-full"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmGHRL5XHRtbzvKWo1nbct6%2FHomepage%3Fnode-id%3D1503%253A5155%26scaling%3Dscale-down%26page-id%3D1503%253A4807%26starting-point-node-id%3D1503%253A5155%26show-proto-sidebar%3D1"
+  allowFullScreen
+></iframe>
 
 ### Creating a design system
 
 It was a big priority for me to get The Indy in a place where they had a foundation-level design system to work with. Often times, the team would discuss adding features in a very ad hoc "Make this card a big bold color" way, and I really wanted to get them to a shared design language.
 
-img
+I started by funneling the existing primitives / design tokens - which had sprawled considerably to contain lots of unique "snowflakes" - into a more efficient system. WCAG AA color contrast and type styles were the main priority here, without neglecting the Indy brand which had built a considerable following.
 
-img
+<Image src="/work/indy/jackpot-primitives.png" height={780} width={1400} layout="responsive" />
+*Sample of Jackpot token doc pages*
 
-img
+<Image src="/work/indy/jackpot-components.png" height={780} width={1400} layout="responsive" />
+*Sample of Jackpot token doc pages*
+
+<iframe
+  className="my-6 h-108 w-full"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmGHRL5XHRtbzvKWo1nbct6%2FHomepage%3Fnode-id%3D710%253A3959%26scaling%3Dmin-zoom%26page-id%3D710%253A3958%26starting-point-node-id%3D710%253A3959"
+  allowFullScreen
+></iframe>
 
 ### Implementation process
 
 The production-level comps for the TNI re-design were done in Figma. Generally when I work with CJ, the level of comps actually generated in a GUI design tool is pretty low. We'll use it as a baseline for component creation, page layout work, and dive into the code after stakeholder signoff on the Figma project work.
+
+<Image src="/work/indy/figma-components.png" height={780} width={1400} layout="responsive" />
+*A few of the Figma components for the site re-design*
+
+Feel free to click through a stripped down prototype in the Figma embed below, or simply head on over to see [the design in production](https://thenvindy.com).
 
 </WorkLayout>
