@@ -42,7 +42,7 @@ const LayoutWrapper = ({ children }) => {
             </h3>
           </div>
         </header>
-        <main>{children}</main>
+        <main className="h-full pt-6">{children}</main>
       </div>
     </SectionContainer>
   )

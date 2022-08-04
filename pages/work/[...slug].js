@@ -41,7 +41,7 @@ export async function getStaticProps({ params }) {
 
 export default function Portfolio({ work, authorDetails }) {
   const { mdxSource, toc, frontMatter } = work
-
+  console.log(frontMatter)
   return (
     <>
       {frontMatter.draft !== true ? (
