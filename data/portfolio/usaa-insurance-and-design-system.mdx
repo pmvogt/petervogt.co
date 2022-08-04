@@ -1,0 +1,169 @@
+---
+title: USAA Insurance & Design System
+publishedOn: January, 9th. 2022
+excerpt: Since 2019, I've been supporting USAA's insurance line of business.
+darkBg: '/mesh/mesh-portrait-1.png'
+bg: '/mesh/mesh-portrait-5.png'
+---
+
+export const workPost = {
+  postTitle: 'USAA Insurance & Design System',
+  publishedOn: 'January, 9th. 2022',
+  excerpt: "Since 2019, I've been supporting USAA's insurance line of business.",
+  darkBg: '/public/mesh/mesh-portrait-1.png',
+  headerBg: '/public/mesh/mesh-portrait-5.png',
+  bg: '/public/mesh/mesh-portrait-5.png',
+}
+
+<p className="pt-0">**Timeframe**: 2019 - Current</p>
+<p className="mt-3">**Role**: Sr. Designer, Design Technologist</p>
+
+## Summary
+
+USAA is a Fortune 100 financial services provider (primarily banking and insurance) for veterans and active US military, and their family members. They are headquartered in San Antonio, Texas USA. I worked in the Plano, Texas office until March 2020 and have been full-time remote since.
+
+Since 2019, I've been supporting USAA's insurance line of business. The first project
+I joined was codenamed Apollo, an IoT command and control native app for policyholding
+USAA members. After the project was shuttered early on in development, I moved on
+to co-owning the design effort for an internal compliance tracker web app with Lead
+Designer Josh Boyd, and have flexed across USAA design teams in various user research
+and "art of the possible" type efforts for VP and C level executives in USAA Insurance.
+
+I've also contributed to the USAA design system and UI component library, with both
+design and development assets in production. I am a firm believer in community maintained
+design systems and it's important to me that designers can help shape their design
+system rather than simply be burdened by the constraints of it in a scaled design
+org.
+
+## USAA Connected Home
+
+{' '}
+<div className="flex-col justify-start divide-y-2 divide-slate-900/40 dark:divide-eggshell-400/10">
+  <p className="mr-4">**Team**:</p>
+  <ul>
+    <li>Josh Boyd - Lead Designer</li>
+    <li>Sarah Xiong, Mike Parra, Kate Chaparro - Designer</li>
+    <li>Peter Vogt - Designer, Design Technologist</li>
+  </ul>
+  <div className="py-2">
+    <p>**Project Type**:</p>
+    <p>End to end experience</p>
+  </div>
+  <p>**Skills leveraged**:</p>
+  <p>
+    Design sprints, user testing, HCD workshops, designing with Sketch, prototyping with React +
+    React Native
+  </p>
+</div>
+USAA Connected Home was initially a very large effort. A designer was allocated for both Android and
+iOS platforms on our team, and one of my responsibilties was conducting research with the native
+designers and testing the team's conclusions against prototypes I built in React Native.
+Additionally, I contributed to shoring up communication barriers between designers and developers
+and creating a pattern library for USAA Connected Home extended from the official USAA design
+system.
+
+### Problem Spaces
+
+<div className="space-between flex flex-col md:flex-row">
+  <div className="pl-8 pt-1">
+    <ul className="list-disc mt-4 md:mt-0">
+      <li>
+        Privacy - how might we operate in a transparency-first model in regard to telemetric data
+        collection?
+      </li>
+      <li>
+        Compliance - how might we ensure the Connected Home enrollment process is thoroughly in
+        compliance with state and federal laws in member states, and how do we communicate that
+        without overwhelming the member?
+      </li>
+      <li>
+        Breadth of liability - how might we communicate the proper level of localized risk of
+        flooding, wildfires, etc - to members?
+      </li>
+      <li>Multiple policies - how might we account for members with several homeowner policies?</li>
+    </ul>
+  </div>
+</div>
+
+### Usability testing with “the real thing”
+
+One of the biggest challenges the team were having was the absence of native OS
+functionality in their prototypes. USAA had a strict InVision and Sketch only
+workflow that limited bringing in advanced design tools to simulate haptic feedback,
+user input with a keyboard, and testing for accessibility compliance for mobile
+users. In addition to facilitating HCD workshops and shaping UX at the feature
+level, I also had a real pull to supercharge the design team's prototypes.
+
+After about a week of deep diving in internal Wikis, project repos, and querying
+Slack for similar problems teams have had, I'd found a gem. A lone developer had
+done some proof of concepts for writing UI with React Native. Now I have a starting
+point.
+
+The first thing I do is get access to add React Native as a depency in a local
+nodeJS environment. USAA doesn't use React Native in production, so I had to jump
+through some hoops to do so. At previous employers, this would have been as simple
+as installing Framer or Protopie. The security in enterprise financial services is a
+whole different beast.
+
+Normally I'd have been frustrated by that, but I'm appreciative of the opportunities
+I got to learn how to make do with very finite resources and how to simply go _find_
+the information that you're looking for in a big org.
+
+### Pivoting from native app to storefront + enrollment UX
+
+When the native app was shuttered, the product pivoted to a much simpler offering: USAA Connected Home became a benefit for members to enroll in to obtain discounts on IoT devices provided by our partner, Resideo (Honeywell Home), as well as a discount on their homeowner insurance policy.
+
+The team fractioned off into different projects, while myself and two other designers took over the public-facing Connected Home site and member-facing enrollment flow. We used past member research on this topic that the team had in droves, and our prototypes were built as React front-ends that I built and maintained on my own.
+
+### Design + Engineering partnership
+
+A funny benefit of prototyping in code: sometimes your code ends up in production. Our public-facing page for the product and enrollment flow re-used the vast majority of presentational JSX and SCSS code I wrote for the prototypes. The public facing page is [here](https://www.usaa.com/my/connected-home?), and enrollment flow can be viewed if you have a USAA membership.
+
+## AutoAdvance
+
+{' '}
+<div className="flex-col justify-start">
+  <p className="mr-4">**Team**:</p>
+  <ul>
+    <li>**Mark McCann, Jared Cook, Ashlae Nelms-Long, Ian Smith, Ian Dickerson** - Developer</li>
+    <li>**Peter Vogt** - Developer, Design Technologist</li>
+    <li>**Chris Welch** - Designer</li>
+  </ul>
+  <div className="py-2">
+    <p>**Project Type**:</p>
+    <p>Dev component (React, VanillaJS, SCSS, Storybook)</p>
+  </div>
+</div>
+In the summer of 2021, I was thrilled to be asked to help the design system developer team in the
+form of a residency. The team was going through a top-down overhaul of the entire system, and they
+were actively looking for folks to embed and help carry the load.
+
+My first assignment was an entire component(!!!). And not just any component, but
+a bit of an unorthodox one called AutoAdvance. The component was to be a group of
+buttons that automatically "advances" to the next group of buttons. The context it's
+most useful in are enrollment flows, quote flows, and questionnaires. "Tap and go"
+is a name typically seen for experiences that leverage the AutoAdvance component
+heavily.
+
+Design of the component had already been done and completed by the time I joined
+the devs, so all of that was a credit to Chris Welch.
+
+### Hurdles & self-growth
+
+-Imposter syndrome: How might I lean into my teammates to push through it?
+
+-Git: How might I adapt to a routine-yet-specific developer team workflow that I'd never encountered before?
+
+-Reusable VanillaJS and unit tests: most of the projects I'd built before leveraged React or at minimum some dependency like Bootstrap that handled much of the event delegation and lower-level component functionality. How might I learn to love the basics?
+
+I will admit that I was intimidated. The team were very high performing and most of them had been working with each other for years. Almost all of the code I have written over my career was filled with shortcuts and imperfections, due to them being mostly destined for design reviews and usability testing rather than a production environment. Here, I was being asked to build an entire component for all of USAA front-end teams to have access to. Whole other ballgame.
+
+The first challenge I had was getting used to the rebase versioning process the team used in Git. This is a pretty common
+thing, but not something I'd worked in before. My teammate Ashlae in particular was so helpful in pairing on Zoom, and incredibly
+patient with me. Now I can rebase commits like a pro.
+
+Another challenge was learning to think + write in a pure Javascript mental model. You don't appreciate the level of abstraction React gives you until you have to target every element manually in the contstructor. Let the record show: when someone hammers on about "Learn pure JS before diving into React/Vue/whatever", in my experience - they're right!
+
+### Results
+
+In the end, AutoAdvance made it into production and my residency felt like a big personal win. When I feel the developer imposter syndrome beast lurking, I simply remind myself that I shipped an enterprise component to production. No, it wasn't easy, and no - that doesn't mean I'm an expert developer now. But with a lot of help from my peers and more sweat more than I would have liked to admit, we shipped it. I was a part of it all, even if just a little one. Nothing can take that feeling away.

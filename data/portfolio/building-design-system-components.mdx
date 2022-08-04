@@ -1,0 +1,93 @@
+---
+title: Building design system components
+publishedOn: January, 7th. 2022
+excerpt: On designing a component to be reusable within a design system
+bg: '/mesh/mesh-portrait-7.png'
+darkBg: '/mesh/mesh-portrait-3.png'
+---
+
+export const workPost = {
+  postTitle: 'Building design system components',
+  publishedOn: 'January, 9th. 2022',
+  excerpt:
+    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
+  darkBg: '/public/mesh/mesh-portrait-3.png',
+  headerBg: '/public/mesh/mesh-landscape-3.png',
+  bg: '/public/mesh/mesh-portrait-7.png',
+}
+
+<div className="divide-y-2 divide-slate-900/40 py-3 dark:divide-eggshell-50" />
+<p className="pt-0">**Timeframe**: 2017-Present</p>
+<p className="pt-3">**Role**: Role: Design Technologist</p>
+<p className="mb-3 pt-3">**Company**: projekt202, USAA</p>
+
+In my career, I've been fortunate to have some incredible opportunities embedded in Design Systems teams. At this point
+I have a pretty solid feel for the majority of problems - at least at a very high altitude - that DS teams solve both in
+service of their consumers, but also internally as a team. Adoption, evangelism, proactive community outreach,
+documentation, "Do we give them nothing but organisms/atoms or do we lock everything the hell down?"...and right, of
+course, building the actual components. That part is the real fun. That's what keeps me coming back.
+
+I'll walk through my perspective + approach to building a UI component for web or native apps in a couple of contexts in which I've done it: One, as the sole maintainer of the design library at $BIG_PRINT_COMPANY while at projekt202. The design system had already been built by some brilliant people before me, but it hadn't been put into implementation mode yet. Teams had built some vision UX work with it, but we were about to move into a 10 team product group as part of BigPrint's company-wide digital transformation effort (which projekt202 drove).
+
+## A file tree viewer
+
+BigPrint, as the tongue-in-cheek-NDA-friendly name implies, specialized in providing DTC print items for consumers. So a "you give them your artwork they give you a poster with the art on it" type deal. We were re-building their in-house PoS software from the ground up, so you can imagine there were plenty of scenarios where file browsing/viewing/uploading is required. As the design system was mature already, we had the freedom to focus on some niche components like this, and this one was fun to take on.
+
+I don't start with sketches or lo-fi work for components. Not really, anyway. It can help contextualize use cases which may give you a better picture at 40,000 feet - but really I'm thinking early about the functionality the team will need to provide. Specifically at the API label. I start to think: what does the props API table look like at the end of this?
+
+An outline forms in my notebook:
+
+```
+--`id/key`: String
+-`disabled`: bool
+-`hasChildren`: bool
+-children/data/structure: Array<TreeFile/TreeDirectory>
+-`isOpen`: bool
+-`isSelected`: bool
+-`onOpen`: func
+-`onSelect`: func
+```
+
+Right, this seems like table stakes level stuff at least. We want to handle event delegation, we want to provide state control, sure of course. But this is still pretty abstract: we don't want to _just_ provide the ability to disable the whole tree. We know from past UX research on the account that employees have wildly different permission levels and often run up against access problems with individual files. We'll have to provide the ability to disable a directory and individual files as well. So already we're likely to end up with:
+
+```
+-edl-tree
+	-edl-tree-dir
+		-edl-tree-file
+```
+
+_EDL is the acronym for the design system name_
+
+In markup terms, that probably looks like:
+
+```
+<edl-file-tree>
+	<edl-tree-dir>
+	{items.map((name, e) =>
+		<edl-tree-file name={name} />
+	})}
+	</edl-tree-dir>
+</edl-file-tree>
+```
+
+It's a start. Envisioning the context when code gets written into the IDE and the genesis of a front-end is taking place really gives me a sense of grounding. I then start trying to think deeper about contexts: we're likely to want file name editing capability if a BigPrint employee needs to rename a customer's file, so isEditable makes sense as a potential boolean prop for `<edl-tree-dir/>` and `<edl-tree-file/>`. We probably want a callback there in case checks need to be made on filename formatting for example, so an `onEdit` callback is a decent bet to propose as well.
+
+I go on completing this list of potential inputs and properties, making sure to get feedback, use-cases and contexts from the DS-consuming delivery teams. After all, they each have individual insight to bring to the table on the slices of the product they're working on. I bring this API proposal to design reviews just like anyone would a Figma prototype. At this point, the developers I'm working with haven't even seen it yet - I hope to come with them with the end in mind first.
+
+### UI Design
+
+Now we'll actually start thinking about how this compon ent looks. Since the design system is mature, there's no need to agonize too long over the basics.
+
+I'll start at the atoms and organisms, thinking about each piece to this component and how they look with the API proposal I drew up prior. We had a really nice folder icon that a teammate drew already - thank god - and we've already established global patterns and tokens for disabled elements, focused elements, etc.
+
+It's starting to take shape, and I'll keep running through the API proposal and generating visual representations in Figma. Eventually we end up right around here:
+
+At this point is when I took edl-tree as a proposal to final signoff from the rest of the designers, the DS engineers, and the PM leads.
+
+### Design assets & SASS handoff
+
+With teamwide signoff, it's time to start prepping deliverables. I made sure the Figma library assets were flexible and production ready:
+
+Then begin prepping some handoff docs, which will supplement both a codepen and Figma prototype I'll put together for the rest of the team:
+
+And that's about the long and short of it, as they say.
