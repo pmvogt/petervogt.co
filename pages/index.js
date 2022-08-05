@@ -1,5 +1,6 @@
 import Card from '@/components/Card'
-import Link from '@/components/Link'
+import Header from '@/components/Header'
+
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
@@ -16,11 +17,11 @@ export default function Home({ works }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <ul className="grid h-full gap-8 sm:grid-cols-1 md:grid-cols-2 md:gap-4 xl:grid-cols-4">
         {works.map((frontMatter) => {
-          const { slug, date, title, bg, darkBg } = frontMatter
+          const { slug, date, title, bg, darkBg, headerBg, headerBgDark } = frontMatter
           return (
             <li key={slug} className="h-full">
               <article>
-                <Card title={title} bg={bg} darkBg={darkBg} />
+                <Card title={title} href={`/work/${slug}`} bg={bg} darkBg={darkBg} />
               </article>
             </li>
           )

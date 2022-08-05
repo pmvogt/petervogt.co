@@ -1,6 +1,7 @@
 import fs from 'fs'
 import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
+import Header from '@/components/Header'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 
@@ -41,7 +42,6 @@ export async function getStaticProps({ params }) {
 
 export default function Portfolio({ work, authorDetails }) {
   const { mdxSource, toc, frontMatter } = work
-  console.log(frontMatter)
   return (
     <>
       {frontMatter.draft !== true ? (

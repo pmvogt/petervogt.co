@@ -4,18 +4,10 @@ publishedOn: January, 7th. 2022
 excerpt: On designing a component to be reusable within a design system
 bg: '/mesh/mesh-portrait-7.png'
 darkBg: '/mesh/mesh-portrait-3.png'
+headerBg: '/mesh/mesh-landscape-7.png'
+headerBgDark: '/mesh/mesh-landscape-3.png'
 purgis: 'durgis'
 ---
-
-export const workPost = {
-  postTitle: 'Building design system components',
-  publishedOn: 'January, 9th. 2022',
-  excerpt:
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
-  darkBg: '/public/mesh/mesh-portrait-3.png',
-  headerBg: '/public/mesh/mesh-landscape-3.png',
-  bg: '/public/mesh/mesh-portrait-7.png',
-}
 
 <div className="divide-y-2 divide-slate-900/40 py-3 dark:divide-eggshell-50" />
 <p className="pt-0">**Timeframe**: 2017-Present</p>
@@ -38,7 +30,7 @@ I don't start with sketches or lo-fi work for components. Not really, anyway. It
 
 An outline forms in my notebook:
 
-```
+```jsx
 --`id/key`: String
 -`disabled`: bool
 -`hasChildren`: bool
@@ -61,12 +53,12 @@ _EDL is the acronym for the design system name_
 
 In markup terms, that probably looks like:
 
-```
+```jsx
 <edl-file-tree>
 	<edl-tree-dir>
-	{items.map((name, e) =>
+	{items.map(name, e) =>
 		<edl-tree-file name={name} />
-	})}
+	}
 	</edl-tree-dir>
 </edl-file-tree>
 ```
