@@ -17,16 +17,15 @@ const Card = ({ work, title, darkBg, bg, imgSrc, href }) => {
   return (
     <button
       type="button"
-      className="leading-0 rounded-lg bg-cover text-left text-slate-900 "
+      className="leading-0 h-full w-full rounded-lg bg-cover text-left text-slate-900"
       style={{
-        maxWidth: '544px',
         backgroundImage: `url(${currentTheme === 'dark' ? `${darkBg}` : `${bg}`})`,
       }}
     >
       <Link href={href} aria-label={`Link to ${title}`}>
-        <div className="overflow-hidden rounded-xl" style={{ minHeight: '420px' }}>
+        <div className="h-36 overflow-hidden rounded-xl md:h-full">
           <div className="p-4">
-            <h2 className="font-serif text-4 font-normal tracking-0 dark:text-eggshell-50 sm:text-4 lg:text-5 xl:text-7">
+            <h2 className="font-serif text-1 font-normal tracking-0 dark:text-eggshell-50 md:text-6">
               {title}
             </h2>
           </div>

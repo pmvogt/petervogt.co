@@ -3,13 +3,13 @@ title: Building design system components
 publishedOn: January, 7th. 2022
 excerpt: On designing a component to be reusable within a design system
 bg: '/mesh/mesh-portrait-7.png'
-darkBg: '/mesh/mesh-portrait-3.png'
+darkBg: '/mesh/mesh-portrait-4.png'
 headerBg: '/mesh/mesh-landscape-3.png'
 headerBgDark: '/mesh/mesh-landscape-7.png'
 purgis: 'durgis'
 ---
 
-<ul className="divide-y-reverse border-t border-b mb-4 w-fit border-slate-500/70 dark:border-eggshell-500/40">
+<ul className="divide-y-reverse border-t border-b mb-4 w-full md:w-fit border-slate-500/70 dark:border-eggshell-500/40">
   <li className="py-2">**Timeframe**: 2017-Present</li>
   <li className="py-2">**Role**: Design Technologist</li>
   <li className="py-2">**Company**: projekt202, USAA</li>
@@ -31,11 +31,10 @@ I don't start with sketches or lo-fi work for components. Not really, anyway. It
 
 An outline forms in my notebook:
 
-```jsx
+```js
 --`id/key`: String
 -`disabled`: bool
 -`hasChildren`: bool
--children/data/structure: Array<TreeFile/TreeDirectory>
 -`isOpen`: bool
 -`isSelected`: bool
 -`onOpen`: func

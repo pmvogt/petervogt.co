@@ -472,9 +472,10 @@ module.exports = {
       height: {
         108: '420px',
       },
-      shadow: {
+      boxShadow: {
         '3xl':
           '-54px -20px 23px rgba(0, 0, 0, 0.01), -31px -11px 20px rgba(0, 0, 0, 0.05), -14px -5px 14px rgba(0, 0, 0, 0.09), -3px -1px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
+        link: '0 -4px 0 0 rgba(178, 245, 234, .7) inset',
       },
     },
     typography: (theme) => ({

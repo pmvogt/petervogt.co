@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.task-list-item::before {
-  @apply hidden;
-}
-
-.task-list-item {
-  @apply list-none;
-}
-
-.footnotes {
-  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+@layer base {
+  a:active,
+  a:visited,
+  a:hover {
+    background-image: linear-gradient(
+      to top,
+      theme('colors.rose.400'),
+      theme('colors.rose.300'),
+      transparent
+    );
+    background-position: 0 120%;
+    background-repeat: no-repeat;
+    background-size: auto 0.75rem;
+  }
 }
