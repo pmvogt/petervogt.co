@@ -1,5 +1,4 @@
 import Card from '@/components/Card'
-import Header from '@/components/Header'
 
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
@@ -15,7 +14,7 @@ export default function Home({ works }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <ul className="grid h-full gap-8 sm:grid-cols-1 md:grid-cols-2 md:gap-4 xl:grid-cols-4">
+      <ul className="grid h-full gap-8 px-8 pt-8 sm:grid-cols-1 md:grid-cols-2 md:gap-4 xl:grid-cols-4">
         {works.map((frontMatter) => {
           const { slug, date, title, bg, darkBg, headerBg, headerBgDark } = frontMatter
           return (

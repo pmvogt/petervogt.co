@@ -17,7 +17,7 @@ const Card = ({ work, title, darkBg, bg, imgSrc, href }) => {
   return (
     <button
       type="button"
-      className="hover:scale-104 leading-0 rounded-lg bg-cover text-left text-slate-900 hover:rounded-2xl"
+      className="leading-0 rounded-lg bg-cover text-left text-slate-900 "
       style={{
         maxWidth: '544px',
         backgroundImage: `url(${currentTheme === 'dark' ? `${darkBg}` : `${bg}`})`,
