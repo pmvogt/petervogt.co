@@ -1,6 +1,30 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
+function withOpacityValue(variable) {
+  return ({ opacityValue }) => {
+    if (opacityValue === undefined) {
+      return `rgb(var(${variable}))`
+    }
+    return `rgb(var(${variable}) / ${opacityValue})`
+  }
+}
+
+const ThemeColors = {
+  base: withOpacityValue('--color-base'),
+  surface: withOpacityValue('--color-surface'),
+  overlay: withOpacityValue('--color-overlay'),
+  muted: withOpacityValue('--color-muted'),
+  subtle: withOpacityValue('--color-subtle'),
+  text: withOpacityValue('--color-text'),
+  love: withOpacityValue('--color-love'),
+  gold: withOpacityValue('--color-gold'),
+  rosePine: withOpacityValue('--color-rose'),
+  pine: withOpacityValue('--color-pine'),
+  foam: withOpacityValue('--color-foam'),
+  iris: withOpacityValue('--color-iris'),
+}
+
 module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
@@ -75,7 +99,6 @@ module.exports = {
       mono: ['Fira Code', ...defaultTheme.fontFamily.mono],
     },
     colors: {
-      primary: colors.mint,
       cyan: {
         50: '#f5fefc',
         100: '#ebfdfa',
@@ -463,6 +486,9 @@ module.exports = {
         'mesh-l-7': "url('/mesh/mesh-landscape-7.png')",
         'mesh-l-8': "url('/mesh/mesh-landscape-8.png')",
       },
+      colors: {
+        ThemeColors,
+      },
       gridTemplateRows: {
         card: 'minmax(min-content, max-content)',
       },
@@ -481,13 +507,12 @@ module.exports = {
     typography: (theme) => ({
       DEFAULT: {
         css: {
-          color: theme('colors.slate.900'),
           a: {
             color: theme('colors.mint.500'),
             '&:hover': {
               color: `${theme('colors.mint.600')} !important`,
             },
-            code: { color: theme('colors.mint.400') },
+            code: { color: theme('colors.rose.500') },
           },
           h1: {
             fontWeight: '600',
@@ -511,16 +536,19 @@ module.exports = {
             fontFamily: 'sans',
           },
           pre: {
-            backgroundColor: theme('colors.slate.800'),
+            backgroundColor: '#191724',
+            borderRadius: '0.5rem',
+            marginTop: '16px',
+            MarginBottom: '16px',
           },
           code: {
             color: theme('colors.rose.500'),
-            backgroundColor: theme('colors.slate.100'),
+            backgroundColor: '#191724',
             paddingLeft: '4px',
             paddingRight: '4px',
             paddingTop: '2px',
             paddingBottom: '2px',
-            borderRadius: '0.25rem',
+            borderRadius: '0.25',
           },
           'code::before': {
             content: 'none',
@@ -553,13 +581,13 @@ module.exports = {
       },
       dark: {
         css: {
-          color: theme('colors.gray.300'),
+          color: theme('colors.text'),
           a: {
             color: theme('colors.primary.500'),
             '&:hover': {
               color: `${theme('colors.primary.400')} !important`,
             },
-            code: { color: theme('colors.primary.400') },
+            code: { color: theme('colors.mint.300') },
           },
           h1: {
             fontWeight: '600',
@@ -579,10 +607,10 @@ module.exports = {
             color: theme('colors.gray.100'),
           },
           pre: {
-            backgroundColor: theme('colors.gray.800'),
+            backgroundColor: theme('colors.base'),
           },
           code: {
-            backgroundColor: theme('colors.gray.800'),
+            backgroundColor: theme('colors.base'),
           },
           details: {
             backgroundColor: theme('colors.gray.800'),

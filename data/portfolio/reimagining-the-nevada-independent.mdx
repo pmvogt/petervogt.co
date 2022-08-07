@@ -1,25 +1,15 @@
 ---
 title: Reimagining the Nevada Independent
 publishedOn: January, 7th. 2022
-excerpt: React Navigation is a number one tool to learn in React Native. You would always use them; these are some of the best practices in using React Navigation
-bg: '/mesh/mesh-portrait-6.png'
-darkBg: '/mesh/mesh-portrait-2.png'
-headerBg: '/mesh/mesh-landscape-2.png'
-headerBgDark: '/mesh/mesh-landscape-6.png'
+excerpt: In 2020 we re-designed the site from the ground up with a focus on improving readability, navigation, discovery, and information architecture. It was the first time since the site was launched in 2016.
+bg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827355/mesh/mesh-portrait-6.png'
+darkBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827328/mesh/mesh-portrait-2.png'
+headerBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659902557/mesh/mesh_landscape_6.png'
+headerBgDark: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827365/mesh/mesh-landscape-2.png'
 ---
 
-export const workPost = {
-  postTitle: 'Reimagining the Nevada Independent',
-  publishedOn: 'January, 9th. 2022',
-  excerpt:
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur',
-  darkBg: '/public/mesh/mesh-portrait-2.png',
-  headerBg: '/public/mesh/mesh-landscape-2.png',
-  bg: '/public/mesh/mesh-portrait-6.png',
-}
-
-<p className="pt-0">**Timeframe**: 2018-2020</p>
-<p className="mt-3">**Role**: Designer, UI Developer</p>
+<p className="pt-0">-**Timeframe**: 2018-2020</p>
+<p className="mt-3">-**Role**: Design Lead</p>
 
 ## Summary
 
@@ -27,7 +17,14 @@ The Nevada Independent are a nonprofit journalism outlet that cover news - polit
 
 It's really an honor to work with him, Jon Ralston, and the rest of the crew at the Indy which I have been privileged to do on a part-time basis over the course of several years. Our [Presidential Candidate Visit Tracker](https://projects.thenevadaindependent.com/election/2020/candidate-tracker) won the first place award for digital innovation in 2019 from the Nevada Press Association (and second place in 2020).
 
-<p className="pt-0 pb-4">*Comps for 2020 Presidential Tracker web app*</p>
+<CustomImage
+  publicId="work/indy/pres-tracker.png"
+  alt="2020 Presidential Tracker web app design mocks"
+  width={1440}
+  height={800}
+  mdx
+  preview
+/>
 
 With input, direction, and content coming from the journalists and editors, CJ and I build TNI's web experiences out together. There's no big infra or UX team or $500/hr consultants driving the design and development. It's just the homie and I. I am very proud of this.
 
@@ -35,27 +32,52 @@ In 2020 we re-designed the site from the ground up with a focus on improving rea
 
 ### Problem spaces:
 
-- **Focus** How might we refactor the IA and organization of elements across The Indy's web platform in a way that places a focus on the journalistic content, and doesn't bog down readers with peripheral features? The original site was designed by a small firm in Las Vegas when the site first launched. Over time, with scale and the constraints of a very small team, things started to become muddled.
+-**Focus**: How might we refactor the IA and organization of elements across The Indy's web platform in a way that places a focus on the journalistic content, and doesn't bog down readers with peripheral features? The original site was designed by a small firm in Las Vegas when the site first launched. Over time, with scale and the constraints of a very small team, things started to become muddled.
 
 Times change and needs evolve. When the team added a new fundraising medium, a new podcast, or a category of reporting - say, when Nevada legalized cannabis - these new things were largely dropped into the homepage somewhere. What once was a well-suited design to a very small independent news outlet became stretched very thin over time.
 
-- **Consistency** How might we bring visual consistency and readability to a web platform that was built without a very rigorous approach to typography, layout, and color? At the time the re-design had started, I had counted over 100 unique type styles and color combinations across the site:
+-**Consistency**: How might we bring visual consistency and readability to a web platform that was built without a very rigorous approach to typography, layout, and color? At the time the re-design had started, I had counted over 100 unique type styles and color combinations across the site:
 
-- **Navigation** How might we get away from dumping "all of the things" onto the homepage, and letting the reader figure it out? Can we feature people?
+-**Navigation**: How might we get away from dumping "all of the things" onto the homepage, and letting the reader figure it out? Can we feature people?
 
 ### The Landscape
 
 I first looked at different news orgs across the web to glean the design strengths of other publications' homepages:
 
+<CustomImage
+  publicId="work/indy/competitive-land.png"
+  alt="News org frontpages, competitive landscape"
+  width={1959}
+  height={1917}
+  mdx
+  preview
+/>
+
 It was clear to me that many of these publications' digital presence reflected their legacies as a front page newspaper. This made sense: the "front page of the paper" layout paradigm had been leveraged since newspapers had been around. People were familiar with it, and one could argue that the front page of a news platform is largely a solved problem. This is also evident in the fact that outlets like Politico and The Hill, who never had print mediums, borrowed much of the same front page layout.
 
 It felt like The Indy had a huge opportunity area here. There was lots of incredible, award-winning content by the team that was being obscured by a sidebar nav with a "junk drawer" type approach, and a massive feature story cover image.
+
+<CustomImage
+  publicId="work/indy/old-header.png"
+  alt="Nevada Independent navigation header and homepage before-redesign"
+  width={2840}
+  height={2240}
+  mdx
+  preview
+/>
 
 ### Re-focusing navigation
 
 The early iterations focused on consolidating the layout into a column format that maximized the emphasis on editorial content, and organized them in a more newspaper-esque frontpage. I also explored two different navigational concepts: keeping the familiar sidebar - with the addition of top level news categories in the header - or obscuring all of the categories behind a mega menu dropdown.
 
-_Early re-design wires_
+<CustomImage
+  publicId="work/indy/early-indy.png"
+  alt="Early IA/wire work for The Nevada Independent"
+  width={1440}
+  height={906}
+  mdx
+  preview
+/>
 
 I ran a small structured survey of around 20 readers that concluded:
 
@@ -65,8 +87,20 @@ I ran a small structured survey of around 20 readers that concluded:
 
 So the lines drawn were pretty clear. Our main navigation would be delievered through a default-hidden mega menu exclusively on mobile, but would be augmented by exposed links on tablet+.
 
+<CustomImage
+  publicId="work/indy/nav-comparison.png"
+  alt="The Nevada Independent nav comparison before and after re-design"
+  width={1420}
+  height={781}
+  mdx
+  preview
+/>
+
 <video controls>
-  <source src="/work/indy/search-interaction.mp4" type="video/mp4" />
+  <source
+    src="https://res.cloudinary.com/dyc1seeg9/video/upload/v1659827864/work/indy/search-interaction.mp4"
+    type="video/mp4"
+  />
   Your browser does not support the video tag.
 </video>
 
@@ -78,28 +112,42 @@ I thought about the nature of how a form with just checkbox inputs works in this
 
 In an afternoon jam session, I put together a proof of concept. The editorial staff and CJ both loved the solution, and it's live on the site now as well. The Figma prototype is below.
 
-<iframe
-  className="my-6 w-full"
-  loading="lazy"
-  height="675"
-  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmGHRL5XHRtbzvKWo1nbct6%2FHomepage%3Fnode-id%3D710%253A3959%26scaling%3Dmin-zoom%26page-id%3D710%253A3958%26starting-point-node-id%3D710%253A3959"
-  allowFullScreen
-></iframe>
+<Figma
+  title="newsletter signup widget concept"
+  url="proto/mGHRL5XHRtbzvKWo1nbct6/Homepage?node-id=710%3A3959&starting-point-node-id=710%3A3959&scaling=scale-down"
+/>
 
-### Creating a design system
+### Working out a design system
 
-It was a big priority for me to get The Indy in a place where they had a foundation-level design system to work with. Often times, the team would discuss adding features in a very ad hoc "Make this card a big bold color" way, and I really wanted to get them to a shared design language.
+It was a big priority for me to get The Indy in a place where they had a foundation-level design system to work with. Often times, the team would discuss adding features in a very ad hoc "Make this card a big bold color" way, and I really wanted to get them to a shared design language. This was a first for the small startup.
 
 I started by funneling the existing primitives / design tokens - which had sprawled considerably to contain lots of unique "snowflakes" - into a more efficient system. WCAG AA color contrast and type styles were the main priority here, without neglecting the Indy brand which had built a considerable following.
 
-_Sample of Jackpot token doc pages_
-
-_Sample of Jackpot token doc pages_
+<CustomImage
+  publicId="work/indy/jackpot-primitives.png"
+  alt="Sample of Jackpot design system primitives"
+  width={2840}
+  height={1562}
+  mdx
+  preview
+/>
 
 ### Implementation process
 
 The production-level comps for the TNI re-design were done in Figma. Generally when I work with CJ, the level of comps actually generated in a GUI design tool is pretty low. We'll use it as a baseline for component creation, page layout work, and dive into the code after stakeholder signoff on the Figma project work.
 
-_A few of the Figma components for the site re-design_
+<CustomImage
+  publicId="work/indy/site-components.png"
+  alt="Some of the reusable components made for The Nevada Independent website design"
+  width={2840}
+  height={1562}
+  mdx
+  preview
+/>
 
 Feel free to click through a stripped down prototype in the Figma embed below, or simply head on over to see [the design in production](https://thenvindy.com).
+
+<Figma
+  title="Boop"
+  url="proto/mGHRL5XHRtbzvKWo1nbct6/Homepage?node-id=1503%3A5155&starting-point-node-id=1503%3A5155&scaling=scale-down"
+/>

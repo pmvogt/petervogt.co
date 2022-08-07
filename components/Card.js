@@ -4,7 +4,7 @@ import Link from './Link'
 
 import { useTheme } from 'next-themes'
 
-const Card = ({ work, title, darkBg, bg, imgSrc, href }) => {
+const Card = ({ title, darkBg, bg, href }) => {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 

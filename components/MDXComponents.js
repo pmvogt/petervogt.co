@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 import { useMemo, useEffect } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
+import { Figma } from 'mdx-embed'
 
 import Image from './Image'
 import CustomImage from './CustomImage'
@@ -15,6 +16,7 @@ export const MDXComponents = {
   TOCInline,
   a: CustomLink,
   pre: Pre,
+  Figma,
   p: (props) => (
     <p
       {...props}

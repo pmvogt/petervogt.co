@@ -2,16 +2,20 @@
 title: Building design system components
 publishedOn: January, 7th. 2022
 excerpt: On designing a component to be reusable within a design system
-bg: '/mesh/mesh-portrait-7.png'
-darkBg: '/mesh/mesh-portrait-3.png'
-headerBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827317/mesh/mesh-landscape-7_mc6iy2.png'
-headerBgDark: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827376/mesh/mesh-landscape-3_eviyno.png'
+bg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827340/mesh/mesh-portrait-7.png'
+darkBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827371/mesh/mesh-portrait-3.png'
+headerBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827376/mesh/mesh-landscape-3.png'
+headerBgDark: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827317/mesh/mesh-landscape-7.png'
 ---
+
+<p className="pt-0">**Timeframe**: 2018 - Current</p>
+<p className="mt-3">**Role**: Design Technologist</p>
+<p className="mt-3">**Companies**: projekt202, USAA</p>
 
 In my career, I've been fortunate to have some incredible opportunities embedded in Design Systems teams.
 At this point I have a pretty solid feel for the majority of problems - at least at a very high altitude - that DS teams solve both in service of their consumers, but also internally as a team. Adoption, evangelism, proactive community outreach, documentation, "Do we give them nothing but organisms/atoms or do we lock everything the hell down?"...and right, of course, building the actual components. That part is the real fun. That's what keeps me coming back.
 
-I'll walk through my perspective + approach to building a UI component for web or native apps in a couple of contexts in which I've done it: One, as the sole maintainer of the design library at $BIG_PRINT_COMPANY while at projekt202. The design system had already been built by some brilliant people before me, but it hadn't been put into implementation mode yet. Teams had built some vision UX work with it, but we were about to move into a 10 team product group as part of BigPrint's company-wide digital transformation effort (which projekt202 drove).
+Here, I'll walk through my perspective + approach to building a UI component for web or native apps in a couple of contexts in which I've done it: One, as the sole maintainer of the design library at $BIG_PRINT_COMPANY while at projekt202. The design system had already been built by some brilliant people before me, but it hadn't been put into implementation mode yet. Teams had built some vision UX work with it, but we were about to move into a 10 team product group as part of BigPrint's company-wide digital transformation effort (which projekt202 drove).
 
 ## File tree view
 
@@ -46,7 +50,7 @@ In markup, "Coding in the real world"-type terms, that probably looks like:
 ```jsx
 <edl-file-tree>
 	<edl-tree-dir>
-	{items.map(name, e) =>
+	{items.map(name) =>
 		<edl-tree-file name={name} />
 	}
 	</edl-tree-dir>
@@ -102,8 +106,6 @@ With teamwide signoff, it's time to start prepping deliverables. I made sure the
 
 Then begin prepping some handoff docs, which will supplement both a codepen and Figma prototype I'll put together for the rest of the team:
 
-And that's about the long and short of it, as they say.
-
 <CustomImage
   publicId="https://res.cloudinary.com/dyc1seeg9/image/upload/c_thumb,w_200,g_face/v1659827932/work/202/edltree4.png"
   alt="Finished EDL tree mockup"
@@ -112,3 +114,5 @@ And that's about the long and short of it, as they say.
   preview
   mdx
 />
+
+And that's about the long and short of it, as they say.
