@@ -10,7 +10,7 @@ const Header = ({ title }) => {
   return (
     <header title={title} className="w-full bg-cover px-9 text-slate-900 dark:text-eggshell-50">
       <div className="flex w-full items-center border-b border-slate-700/50 py-2 dark:border-slate-100/50 md:justify-between md:border-b-0 xl:pt-12">
-        <ul className="flex w-full flex-col items-start whitespace-pre text-center sm:w-full md:w-full md:flex-row md:items-center md:items-center lg:w-6/12">
+        <ul className="flex w-full flex-col items-start whitespace-pre text-center sm:w-full md:w-full md:flex-row md:items-center lg:w-6/12">
           <li className="pr-0 lg:pr-8">
             <Link href="/">
               <h1 className="font-serif text-7 font-semibold tracking-1 md:text-9 md:leading-8 lg:text-10 lg:leading-9">
@@ -18,6 +18,7 @@ const Header = ({ title }) => {
               </h1>
             </Link>
           </li>
+
           <li className="hidden flex-shrink border-l border-r border-slate-700/50 pl-8 pr-8 dark:border-slate-100/50 xl:block">
             <h2 className="text-center font-sans text-base font-normal leading-normal">
               Product Designer / Design Technologist

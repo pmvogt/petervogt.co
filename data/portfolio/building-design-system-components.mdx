@@ -3,27 +3,17 @@ title: Building design system components
 publishedOn: January, 7th. 2022
 excerpt: On designing a component to be reusable within a design system
 bg: '/mesh/mesh-portrait-7.png'
-darkBg: '/mesh/mesh-portrait-4.png'
-headerBg: '/mesh/mesh-landscape-3.png'
-headerBgDark: '/mesh/mesh-landscape-7.png'
-purgis: 'durgis'
+darkBg: '/mesh/mesh-portrait-3.png'
+headerBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827317/mesh/mesh-landscape-7_mc6iy2.png'
+headerBgDark: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827376/mesh/mesh-landscape-3_eviyno.png'
 ---
 
-<ul className="divide-y-reverse border-t border-b mb-4 w-full md:w-fit border-slate-500/70 dark:border-eggshell-500/40">
-  <li className="py-2">**Timeframe**: 2017-Present</li>
-  <li className="py-2">**Role**: Design Technologist</li>
-  <li className="py-2">**Company**: projekt202, USAA</li>
-</ul>
-
-In my career, I've been fortunate to have some incredible opportunities embedded in Design Systems teams. At this point
-I have a pretty solid feel for the majority of problems - at least at a very high altitude - that DS teams solve both in
-service of their consumers, but also internally as a team. Adoption, evangelism, proactive community outreach,
-documentation, "Do we give them nothing but organisms/atoms or do we lock everything the hell down?"...and right, of
-course, building the actual components. That part is the real fun. That's what keeps me coming back.
+In my career, I've been fortunate to have some incredible opportunities embedded in Design Systems teams.
+At this point I have a pretty solid feel for the majority of problems - at least at a very high altitude - that DS teams solve both in service of their consumers, but also internally as a team. Adoption, evangelism, proactive community outreach, documentation, "Do we give them nothing but organisms/atoms or do we lock everything the hell down?"...and right, of course, building the actual components. That part is the real fun. That's what keeps me coming back.
 
 I'll walk through my perspective + approach to building a UI component for web or native apps in a couple of contexts in which I've done it: One, as the sole maintainer of the design library at $BIG_PRINT_COMPANY while at projekt202. The design system had already been built by some brilliant people before me, but it hadn't been put into implementation mode yet. Teams had built some vision UX work with it, but we were about to move into a 10 team product group as part of BigPrint's company-wide digital transformation effort (which projekt202 drove).
 
-## A file tree viewer
+## File tree view
 
 BigPrint, as the tongue-in-cheek-NDA-friendly name implies, specialized in providing DTC print items for consumers. So a "you give them your artwork they give you a poster with the art on it" type deal. We were re-building their in-house PoS software from the ground up, so you can imagine there were plenty of scenarios where file browsing/viewing/uploading is required. As the design system was mature already, we had the freedom to focus on some niche components like this, and this one was fun to take on.
 
@@ -51,7 +41,7 @@ Right, this seems like table stakes level stuff at least. We want to handle even
 
 _EDL is the acronym for the design system name_
 
-In markup terms, that probably looks like:
+In markup, "Coding in the real world"-type terms, that probably looks like:
 
 ```jsx
 <edl-file-tree>
@@ -71,16 +61,54 @@ I go on completing this list of potential inputs and properties, making sure to 
 
 Now we'll actually start thinking about how this compon ent looks. Since the design system is mature, there's no need to agonize too long over the basics.
 
-I'll start at the atoms and organisms, thinking about each piece to this component and how they look with the API proposal I drew up prior. We had a really nice folder icon that a teammate drew already - thank god - and we've already established global patterns and tokens for disabled elements, focused elements, etc.
+I'll start at the atoms and organisms, thinking about each piece to this component and how they look with the API proposal I drew up prior. Thanks to the design system, we already had established global patterns and tokens for disabled elements, focused elements, etc.
 
-It's starting to take shape, and I'll keep running through the API proposal and generating visual representations in Figma. Eventually we end up right around here:
+<CustomImage
+  publicId="work/202/edltree1.png"
+  alt="Early design of the EDL Tree component"
+  width={500}
+  height={330}
+  mdx
+  preview
+/>
 
-At this point is when I took edl-tree as a proposal to final signoff from the rest of the designers, the DS engineers, and the PM leads.
+It's starting to take shape, and I'll keep running through the API proposal and generating visual representations
+in Figma. Eventually we end up right around here:
+
+<CustomImage
+  publicId="work/202/edltree3.png"
+  alt="EDL Tree base components in Figma"
+  width={2400}
+  height={722}
+  preview
+  mdx
+/>
+
+At this point is when I took edl-tree as a proposal to final signoff from the rest of the designers,
+the DS engineers, and the PM leads.
 
 ### Design assets & SASS handoff
 
 With teamwide signoff, it's time to start prepping deliverables. I made sure the Figma library assets were flexible and production ready:
 
+<CustomImage
+  publicId="work/202/edltree2.png"
+  alt="EDL Tree Figma components"
+  width={1203}
+  height={2980}
+  preview
+  mdx
+/>
+
 Then begin prepping some handoff docs, which will supplement both a codepen and Figma prototype I'll put together for the rest of the team:
 
 And that's about the long and short of it, as they say.
+
+<CustomImage
+  publicId="https://res.cloudinary.com/dyc1seeg9/image/upload/c_thumb,w_200,g_face/v1659827932/work/202/edltree4.png"
+  alt="Finished EDL tree mockup"
+  width={1200}
+  height={1900}
+  preview
+  mdx
+/>

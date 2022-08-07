@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import Link from './Link'
 
 import { useTheme } from 'next-themes'
@@ -15,9 +16,9 @@ const Card = ({ work, title, darkBg, bg, imgSrc, href }) => {
   const currentTheme = theme
 
   return (
-    <button
-      type="button"
-      className="leading-0 h-full w-full rounded-lg bg-cover text-left text-slate-900"
+    <motion.button
+      type="motion.button"
+      className="leading-0 h-full w-full rounded-lg bg-cover bg-center text-left text-slate-900"
       style={{
         backgroundImage: `url(${currentTheme === 'dark' ? `${darkBg}` : `${bg}`})`,
       }}
@@ -25,13 +26,13 @@ const Card = ({ work, title, darkBg, bg, imgSrc, href }) => {
       <Link href={href} aria-label={`Link to ${title}`}>
         <div className="h-36 overflow-hidden rounded-xl md:h-full">
           <div className="p-4">
-            <h2 className="font-serif text-1 font-normal tracking-0 dark:text-eggshell-50 md:text-6">
+            <h2 className="font-serif text-1 font-normal tracking-0 dark:text-eggshell-50 md:text-5">
               {title}
             </h2>
           </div>
         </div>
       </Link>
-    </button>
+    </motion.button>
   )
 }
 

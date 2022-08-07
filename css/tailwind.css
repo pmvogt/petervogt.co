@@ -17,3 +17,37 @@
     background-size: auto 0.75rem;
   }
 }
+
+:root {
+  /* Global style variables */
+  --tw-clr-mint: 53 246 228;
+  --tw-clr-rose: 239 81 109;
+  --tw-clr-black: 32 33 37;
+
+  --clr-primary: rgb(var(--tw-clr-rose));
+  --clr-accent: rgb(var(--tw-clr-mint));
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.ReactModal__Body--open {
+  position: static;
+  overflow-y: scroll;
+}
+
+.ReactModal__Html--open {
+  overflow-y: hidden;
+}
+
+.ReactModalPortal {
+  position: fixed;
+  z-index: 51 !important;
+}
+
+::selection {
+  background-color: var(--clr-primary);
+  color: rgb(var(--tw-clr-black));
+}

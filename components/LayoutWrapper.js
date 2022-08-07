@@ -10,7 +10,7 @@ const LayoutWrapper = ({ children, title, headerBg, headerBgDark }) => {
     <SectionContainer>
       <div className="flex h-screen flex-col bg-gradient-light dark:bg-gradient-dark">
         {asPath === '/' && <Header title={title} headerBg={headerBg} headerBgDark={headerBgDark} />}
-        <main className="h-full px-7 py-8">{children}</main>
+        <main className="h-full pb-8">{children}</main>
       </div>
     </SectionContainer>
   )
