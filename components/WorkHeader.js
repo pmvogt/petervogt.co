@@ -41,7 +41,7 @@ const Header = ({ title, headerBg, headerBgDark }) => {
                   key={link.title}
                   href={link.href}
                   className={`font-regular mr-4 cursor-pointer font-sans tracking-8 hover:underline-offset-4 ${
-                    asPath === link.href ? 'no-underline' : 'text-slate-900 dark:text-eggshell-50'
+                    asPath === link.href ? 'underline' : 'text-eggshell-50'
                   }`}
                 >
                   {link.title}

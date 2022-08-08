@@ -52,7 +52,9 @@ const Header = ({ title }) => {
                   key={link.title}
                   href={link.href}
                   className={`font-regular text-md mr-4 cursor-pointer font-sans tracking-8 hover:underline-offset-4 lg:text-lg ${
-                    asPath === link.href ? 'no-underline' : 'text-slate-900 dark:text-eggshell-50'
+                    asPath === link.href
+                      ? 'underline'
+                      : 'text-slate-900 no-underline dark:text-eggshell-50'
                   }`}
                 >
                   {link.title}
