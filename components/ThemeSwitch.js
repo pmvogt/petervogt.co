@@ -31,7 +31,7 @@ const ThemeSwitch = () => {
           fill="none"
           initial={animations.pathInitial}
           animate={animations.pathAnimate}
-          className="h-8 w-8 text-slate-900 dark:text-eggshell-50"
+          className="h-8 w-8 text-rose-400 dark:text-mint-300"
         >
           {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? <Light /> : <Dark />}
         </motion.svg>

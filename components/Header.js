@@ -10,7 +10,7 @@ const Header = ({ title }) => {
   const { asPath } = useRouter()
 
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       <header title={title} className="w-full bg-cover px-9 text-slate-900 dark:text-eggshell-50">
         <div className="flex w-full items-center border-b border-slate-700/50 py-2 dark:border-slate-100/50 md:justify-between md:border-b-0 xl:pt-8">
           <ul className="flex w-full flex-col items-start whitespace-pre text-center sm:w-full md:w-full md:flex-row md:items-center lg:w-6/12">
