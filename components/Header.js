@@ -35,7 +35,7 @@ const Header = ({ title }) => {
           </ul>
           <div className="flex items-center">
             <ThemeSwitch />
-            <button className="py-1 pl-5">terminal</button>
+            {/* <button className="py-1 pl-5">terminal</button> */}
           </div>
         </div>
         <div className="pt-4 md:hidden">
