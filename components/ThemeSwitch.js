@@ -13,11 +13,6 @@ const ThemeSwitch = () => {
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
 
-  function handleClick() {
-    play()
-    setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')
-  }
-
   return (
     <AnimatePresence>
       <motion.button

@@ -5,12 +5,13 @@ import { useTheme } from 'next-themes'
 import { useSound } from 'use-sound'
 
 const Card = ({ title, darkBg, bg, href }) => {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [play] = useSound('/static/quick_toggle.mp3', { volume: 0.25 })
 
   // check if components are mounted to avoid hydration errors while theme switching
   useEffect(() => setMounted(true), [])
+
   if (!mounted) return null
 
   // const currentTheme = theme === 'system' ? systemTheme : theme;
@@ -35,7 +36,7 @@ const Card = ({ title, darkBg, bg, href }) => {
         type="button"
         className="leading-0 h-full w-full rounded-lg bg-cover bg-center pt-4 text-left text-slate-900 md:pt-0"
         style={{
-          backgroundImage: `url(${currentTheme === 'dark' ? `${darkBg}` : `${bg}`})`,
+          backgroundImage: `url(${resolvedTheme === 'dark' ? `${darkBg}` : `${bg}`})`,
         }}
       >
         <Link onClick={play} href={href} aria-label={`Link to ${title}`}>
