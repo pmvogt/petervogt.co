@@ -22,7 +22,7 @@ export default function Home({ works, title, headerBg, headerBgDark }) {
         {works.map((frontMatter) => {
           const { slug, date, title, bg, darkBg, headerBg, headerBgDark } = frontMatter
           return (
-            <li key={slug} className="h-40 md:h-80 lg:h-72 xl:h-108">
+            <li key={slug} className="h-44 md:h-80 lg:h-72 xl:h-108">
               <article className="h-full">
                 <Card title={title} href={`/work/${slug}`} bg={bg} darkBg={darkBg} />
               </article>

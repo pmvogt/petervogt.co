@@ -54,6 +54,15 @@ org.
   </div>
 </div>
 
+<CustomImage
+  publicId="work/usaa/connected-home1.png"
+  alt="Design mockups for iOS and Android USAA at Home app"
+  width={2426}
+  height={1958}
+  preview
+  mdx
+/>
+
 USAA Connected Home was initially a very large effort. A designer was allocated for both Android and
 iOS platforms on our team, and one of my responsibilties was conducting research with the native designers
 and testing the team's conclusions against prototypes I built in React Native. Additionally, I contributed
@@ -62,14 +71,40 @@ for USAA Connected Home extended from the official USAA design system.
 
 ### Problem Spaces
 
-- **Privacy** - how might we operate in a transparency-first model in regard to telemetric data
+<br />
+
+<CustomImage
+  publicId="work/usaa/chboard.png"
+  alt="USAA at Home design sprint artifacts"
+  width={1008}
+  height={756}
+  preview
+  mdx
+/>
+
+<br />
+<br />
+
+<CustomImage
+  publicId="work/usaa/connected-home2.png"
+  alt="USAA at Home design sprint artifacts"
+  width={1008}
+  height={756}
+  preview
+  mdx
+/>
+
+- -**Privacy** - how might we operate in a transparency-first model in regard to telemetric data
   collection?
-- **Compliance** - how might we ensure the Connected Home enrollment process is thoroughly in
+
+- -**Compliance** - how might we ensure the Connected Home enrollment process is thoroughly in
   compliance with state and federal laws in member states, and how do we communicate that
   without overwhelming the member?
-- **Breadth of liability** - how might we communicate the proper level of localized risk of
+
+- -**Breadth of liability** - how might we communicate the proper level of localized risk of
   flooding, wildfires, etc - to members?
-- **Multiple policies** - how might we account for members with several homeowner policies?
+
+- -**Multiple policies** - how might we account for members with several homeowner policies?
 
 ### Usability testing with “the real thing”
 
@@ -95,15 +130,44 @@ Normally I'd have been frustrated by that, but I'm appreciative of the opportuni
 I got to learn how to make do with very finite resources and how to simply go _find_
 the information that you're looking for in a big org.
 
+The first React Native prototype I did was a smash hit. We happened to be conceptualizing a Create Account workflow, which was a great baby step into using RN - which I had no experience with prior. The AVP in charge of Connected Home, our executive sponsor, and most importantly to me - our team - were thrilled with the results. I never tire of watching the smiles on a design team when their stuff comes to life.
+
+<CustomImage
+  publicId="work/usaa/connected-home-auth.png"
+  alt="React native prototype demoing UX for USAA at Home auth"
+  width={1300}
+  height={786}
+  preview
+  mdx
+/>
+
 ### Pivoting from native app to storefront + enrollment UX
 
 When the native app was shuttered, the product pivoted to a much simpler offering: USAA Connected Home became a benefit for members to enroll in to obtain discounts on IoT devices provided by our partner, Resideo (Honeywell Home), as well as a discount on their homeowner insurance policy.
+
+<CustomImage
+  publicId="work/usaa/connected-home3.png"
+  alt="Early wires for Connected Home storefront experience"
+  width={1032}
+  height={758}
+  preview
+  mdx
+/>
 
 The team fractioned off into different projects, while myself and two other designers took over the public-facing Connected Home site and member-facing enrollment flow. We used past member research on this topic that the team had in droves, and our prototypes were built as React front-ends that I built and maintained on my own.
 
 ### Design + Engineering partnership
 
 A funny benefit of prototyping in code: sometimes your code ends up in production. Our public-facing page for the product and enrollment flow re-used the vast majority of presentational JSX and SCSS code I wrote for the prototypes. The public facing page is [here](https://www.usaa.com/my/connected-home?), and enrollment flow can be viewed if you have a USAA membership.
+
+<CustomImage
+  publicId="work/usaa/connected-home5.png"
+  alt="USAA Connected Home React prototype I made for our design team"
+  width={1374}
+  height={4662}
+  preview
+  mdx
+/>
 
 ## AutoAdvance component
 
@@ -119,6 +183,7 @@ A funny benefit of prototyping in code: sometimes your code ends up in productio
     <p>Dev component (React, VanillaJS, SCSS, Storybook)</p>
   </div>
 </div>
+
 In the summer of 2021, I was thrilled to be asked to help the design system developer team in the form
 of a residency. The team was going through a top-down overhaul of the entire system, and they were actively
 looking for folks to embed and help carry the load.
@@ -132,6 +197,15 @@ heavily.
 
 Design of the component had already been done and completed by the time I joined
 the devs, so all of that was a credit to Chris Welch.
+
+<CustomImage
+  publicId="work/usaa/auto-advance-mockup.png"
+  alt="USAA Connected Home React prototype I made for our design team"
+  width={1024}
+  height={1001}
+  preview
+  mdx
+/>
 
 ### Hurdles & self-growth
 
@@ -152,3 +226,12 @@ Another challenge was learning to think + write in a pure Javascript mental mode
 ### Results
 
 In the end, AutoAdvance made it into production and my residency felt like a big personal win. When I feel the developer imposter syndrome beast lurking, I simply remind myself that I shipped an enterprise component to production. No, it wasn't easy, and no - that doesn't mean I'm an expert developer now. But with a lot of help from my peers and more sweat more than I would have liked to admit, we shipped it. I was a part of it all, even if just a little one. Nothing can take that feeling away.
+
+<CustomImage
+  publicId="work/usaa/auto-advance-production.gif"
+  alt="Screencap of AutoAdvance component in production via Storybook"
+  width={632}
+  height={416}
+  preview
+  mdx
+/>
