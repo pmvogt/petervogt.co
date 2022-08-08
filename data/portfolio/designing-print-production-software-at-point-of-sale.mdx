@@ -1,6 +1,6 @@
 ---
 title: Designing print-production software at point-of-sale
-publishedOn: January, 7th. 2022
+publishedOn: August 1st, 2022
 excerpt: React Navigation is a number one tool to learn in React Native. You would always use them; these are some of the best practices in using React Navigation
 bg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827360/mesh/mesh-portrait-8.png'
 darkBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827334/mesh/mesh-portrait-4.png'
@@ -8,4 +8,154 @@ headerBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827320/mesh/me
 headerBgDark: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827323/mesh/mesh-landscape-8.png'
 ---
 
-# Designing print-production software at point-of-sale
+<div className="space-evenly mb-8 flex border-y border-slate-900/40 py-4 dark:border-eggshell-50/40">
+  <ul className="list-style-none w-3/4">
+    <li className="pt-0">**Timeframe**: 2017 - 2019</li>
+    <li className="mt-3">**Role**: Experience Designer, Design Technologist</li>
+    <li className="mt-3">
+      **Skills Leveraged**: Moderated user testing, Contextual inquiries, Heuristic evaluation,
+      Sketch, Abstract, FramerJS
+    </li>
+  </ul>
+  <div>
+    <label className="pb-4">**Table of Contents**</label>
+    <TOCInline toc={props.toc} exclude="Overview" toHeading={3} />
+  </div>
+</div>
+
+# Summary
+
+projekt202 are a digital transformation consultancy in Addison, TX with an emphasis on user experience research and design. I served as a designer there for two years, which included winning multiple awards and being promoted to the company's first design technologist role.
+
+I had worked for a few different client accounts, but the bulk of my time was spent with a client I'll refer to as $BIG_PRINT_COMPANY or BigPrint for NDA-related purposes. I served first as a designer on one of ten agile teams which were the boots-on-the-ground for BigPrint's digital transformation efforts. We were effectively re-building all of their in-house PoS systems, customer-facing web apps, and internal services from the ground up. I also spent time as a maintainer of the design system for the agile teams, which you can read about [here](/building-design-system-components).
+
+There were so many challenges in this space. Looking back on my career, this client work was the most challenging. Coming into work every day and sitting next to people who have spent 20 years at a company building what are now legacy systems, when you were brought in solely to displace those systems can be very trying. The opinions you bring to the table are easily hand-waved off - you don't have the same context the client's veterans do. On top of that, you are trying to convince people who built software for 15-20+ years in a waterfall environment with old-school legacy technology: "Hey, building software with modern web tech with modern UX features is not such a horrible and backward thing!"
+
+The path to success I found was leaning into our user resarch _hard_. The client's developer teams loved being included in user testing sessions in the projekt202 lab. Over time, it became simple: are we disagreeing over implementation details? Lets take it to testing. Additionally, I learned to push myself to a new limit of patience I didn't know I had. I'll always be grateful for my time in consulting for that.
+
+## Print production tools
+
+<div className="flex-col justify-start divide-slate-900/40 border-y-2 py-2 dark:divide-eggshell-400/10">
+  <p className="mr-4 mb-3">**Team**:</p>
+  <ul className="py-4">
+    <li>Sarah Leick - Sr. Designer</li>
+    <li>Nick Andreoli - Experience Designer</li>
+    <li>Peter Vogt - Experience Designer</li>
+  </ul>
+</div>
+
+The agile team that I was embedded on was responsible for in-house print production at the point of sale units in-store at BigPrint. At the time, in-store team members used a suite of tools set up as extensions of the Adobe ecosystem to edit customer artwork. If you came in needing a birthday poster printed, you would give them a flash drive or email your art. They'd pull up one of the multitude of applications at their disposal and go from there.
+
+At projekt202, we conducted user testing sessions as a team - so while I was the only one responsible for the print production work, I was paired with my colleagues Sarah and Nick so that we could run tests together.
+
+### User scenarios
+
+For this particular round of testing, our design for the new print production tool was fairly mature. We had been working about a year up to this point on it, and there were a couple of touchpoints that myself and the stakeholders wanted to stress test.
+
+Specifically, the touchpoints we wanted to test were:
+
+- -Product navigator (findability for employees on a specific product)
+
+- -Print configurator (usability of image editing tools UX in the app)
+
+- -Pre-production & print (usability of in-app functions to set up print fulfillment - scaling art dimensions, setting crop lines and cut marks, etc - VERY costly for BigPrint if employees make mistakes here)
+
+We put together three scenarios to test these touchpoints with real BigPrint in-store employees:
+
+<CustomImage
+  publicId="work/202/printworkflow.png"
+  alt="User workflows to be tested with BigPrint employees"
+  width={8000}
+  height={2000}
+  mdx
+  preview
+/>
+
+<br />
+
+- -Employee ("team member") searches for business cards using the product navigator, selects the customer's due date in the app, check's the product details for business card, and changes finishing options (gloss, matte, etc)
+
+- -Team member searches for outdoor banner using product navigator, uploads a customer's art file to the app, fits the customer art to the in-app artboard, recognizes that the art is very low resolution and finally adds text to the art for the customer.
+
+- -Team member locates binder "spline options", uploads the customer's artwork to the spline, initiates a "print preview" modal, paginates through or prints all, and reprints the spline page afterward.
+
+<br />
+
+<CustomImage
+  publicId="work/202/printworkflow2.png"
+  alt="User workflows to be tested with BigPrint employees"
+  width={1092}
+  height={868}
+  mdx
+  preview
+/>
+
+<br />
+
+## Testing scenario 1
+
+A total of nine testing participants were gathered for our validation cycle. It was a combination of BigPrint store managers, store consultants, store leads, and assistant managers - we wanted team members who had multiple years of experience with print production.
+
+<CustomImage
+  publicId="work/202/scenario1.png"
+  alt="Print production user testing scenario one"
+  width={4116}
+  height={1440}
+  mdx
+  preview
+/>
+
+> _“I think it’s fantastic it doesn’t allow a frontline TM to offer a
+> product that takes days when they want it by tomorrow.”_
+> -P9
+
+### Key findings
+
+- The experience we designed for finding a product multiple ways and filtering were well-liked. Participants felt comfortable finding business cards a variety of ways — whether searching, filtering or scrolling. Most participants opted to scroll on their first experience. Later when finding another product nearly all opted-for the search option instead, with some mentioning it would be a faster choice the second time around.
+
+- The addition of a product details page was a big hit with participants, who were used to having none of these service-level item details easily accessible. However, there was one detail we caught:
+
+<CustomImage
+  publicId="work/202/eyeicon.png"
+  alt="UX defect resolution sourced by testing scenario 1"
+  height={761}
+  width={377}
+  mdx
+  preview
+/>
+
+In our design for the product cards, clicking "Add item" would add the item to the order, but clicking the card itself would bring you to the product details view. On day one of testing, half of participants noticed both card actions (add item + view details), but it wasn't clear that the eye icon would take them to "Details". On day 2 of testing, we updated the product cards to include an "eye" icon on hover for some participants and an "info" icon on hover for others. Day 2 had an increase in task success after this improvement.
+
+## Testing scenario 2
+
+<CustomImage
+  publicId="work/202/scenario2.png"
+  alt="Print production user testing scenario one"
+  width={4116}
+  height={1440}
+  mdx
+  preview
+/>
+
+> _“This would make it so easy to see exactly what we’re printing first, rather than print it and *then* realize it’s bad.”_
+>
+> -P5
+
+### Key findings
+
+- - Participants accurately articulated what to do to find the details of the outdoor banner, mentioning that "The design made it easy to learn how to do so the first time.". Fast learnability was a huge win for our stakeholders and by extension, us on the design team.
+
+- - Multiple participants reported that pricing info and estimates were the most important info they're looking for in these scenarios. As such, we recommended the pricing table be elevated in the visual heirarchy in the app.
+
+- - The in-app image editing tools were a huge success. Currently, the team members would print an item out to show a customer anytime their art had been modified. The idea that they could add text or scale an image in the app, turn a display around and show the customer a preview was a gamechanger.
+
+<CustomImage
+  publicId="work/202/editicons.png"
+  alt="Print production user testing scenario one"
+  width={584}
+  height={537}
+  mdx
+  preview
+/>
+
+- In a classic display of iconography conflation, we had to switch up our icons for the edit mode UI toolbar. The "Edit" and "fit" icons weren't resonating with participants, and they were having trouble directing themselves to the appropriate buttons when prompted. We also added tooltips to the UI toolbar buttons to supplement understanding of each, and observed much faster participant findability for the appropriate tools.

@@ -36,7 +36,6 @@ export const MDXComponents = {
     />
   ),
   h3: (props) => <h3 {...props} className="mt-4 mb-2 font-sans text-1 tracking-4" />,
-
   wrapper: ({ components, layout, ...rest }) => {
     return <PostLayout {...rest} />
   },
