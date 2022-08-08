@@ -18,7 +18,7 @@ export default function Home({ works, title, headerBg, headerBgDark }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <Header title={title} headerBg={headerBg} headerBgDark={headerBgDark} />
 
-      <ul className="grid w-full gap-4 px-8 pt-4 sm:grid-cols-1 md:grid-cols-2 md:gap-8 md:pt-0 xl:grid-cols-4">
+      <ul className="grid w-full gap-6 px-8 pt-8 sm:grid-cols-1 md:grid-cols-2 md:gap-8 md:pt-0 xl:grid-cols-4">
         {works.map((frontMatter) => {
           const { slug, date, title, bg, darkBg, headerBg, headerBgDark } = frontMatter
           return (

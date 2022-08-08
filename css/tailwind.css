@@ -20,6 +20,10 @@ html {
   overflow-x: hidden;
 }
 
+pre {
+  overflow: scroll;
+}
+
 .ReactModal__Body--open {
   position: static;
   overflow-y: scroll;
@@ -37,4 +41,16 @@ html {
 ::selection {
   background-color: var(--clr-primary);
   color: rgb(var(--tw-clr-black));
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(var(--color-iris));
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-iris));
 }
