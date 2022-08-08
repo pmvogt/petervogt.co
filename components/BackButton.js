@@ -2,12 +2,18 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { animations } from '@/data/animations'
-
+import { useSound } from 'use-sound'
 const BackButton = () => {
   const router = useRouter()
+  const [play] = useSound('/static/quick_toggle.mp3', { volume: 0.25 })
 
   return (
-    <button type="button" onClick={() => router.back()}>
+    <button
+      type="button"
+      onClick={() => {
+        router.back(), play()
+      }}
+    >
       <motion.svg
         className="h-6 w-6 text-eggshell-50"
         fill="none"

@@ -69,10 +69,18 @@ module.exports = withBundleAnalyzer({
     ]
   },
   webpack: (config, { dev, isServer }) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
+    config.module.rules.push(
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.mp3$/,
+        use: {
+          loader: 'file-loader',
+        },
+      }
+    )
 
     if (!dev && !isServer) {
       // Replace React with Preact only in client production build
