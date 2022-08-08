@@ -35,7 +35,7 @@ const Header = ({ title, headerBg, headerBgDark }) => {
               Peter Vogt
             </h1>
             <h2 className="pl-0 text-base leading-4 md:pl-4 md:pr-4">{title}</h2>
-            <div className="flex pl-4">
+            <div className="flex pl-0 pt-4 md:pt-0 md:pl-4">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
