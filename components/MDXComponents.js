@@ -1,22 +1,22 @@
 /* eslint-disable react/display-name */
-import { useMemo, useEffect } from 'react'
+import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
-import { Figma } from 'mdx-embed'
 
 import Image from './Image'
 import CustomImage from './CustomImage'
-
 import CustomLink from './Link'
 import TOCInline from './TOCInline'
 import Pre from './Pre'
+import { motion } from 'framer-motion'
+import PostLayout from '@/layouts/PostLayout'
 
 export const MDXComponents = {
   Image,
   CustomImage,
   TOCInline,
   a: CustomLink,
+  motion,
   pre: Pre,
-  Figma,
   p: (props) => (
     <p
       {...props}
@@ -38,8 +38,7 @@ export const MDXComponents = {
   h3: (props) => <h3 {...props} className="mt-4 mb-2 font-sans text-1 tracking-4" />,
 
   wrapper: ({ components, layout, ...rest }) => {
-    const Layout = require(`../layouts/${layout}`).default
-    return <Layout {...rest} />
+    return <PostLayout {...rest} />
   },
 }
 

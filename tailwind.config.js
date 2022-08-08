@@ -508,9 +508,9 @@ module.exports = {
       DEFAULT: {
         css: {
           a: {
-            color: theme('colors.mint.500'),
+            color: theme('colors.rose.600'),
             '&:hover': {
-              color: `${theme('colors.mint.600')} !important`,
+              color: `${theme('colors.rose.700')} !important`,
             },
             code: { color: theme('colors.rose.500') },
           },
@@ -583,9 +583,9 @@ module.exports = {
         css: {
           color: theme('colors.text'),
           a: {
-            color: theme('colors.primary.500'),
+            color: theme('colors.mint.600'),
             '&:hover': {
-              color: `${theme('colors.primary.400')} !important`,
+              color: `${theme('colors.mint.700')} !important`,
             },
             code: { color: theme('colors.mint.300') },
           },

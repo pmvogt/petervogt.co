@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Router, { useRouter } from 'next/router'
 import { useTheme } from 'next-themes'
-import { stagger, useMotionAnimate } from 'motion-hooks'
 
 import ThemeSwitch from './ThemeSwitch'
 import Link from './Link'
@@ -12,13 +11,6 @@ const Header = ({ title, headerBg, headerBgDark }) => {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const { pathname, router, asPath } = useRouter()
-  const { play, isFinished, replay } = useMotionAnimate('.progress', {
-    strokeDasharray: ['0,1', '1,1'],
-  })
-
-  useEffect(() => {
-    play()
-  }, [])
 
   // check if components are mounted to avoid hydration errors while theme switching
   useEffect(() => setMounted(true), [])
@@ -46,7 +38,7 @@ const Header = ({ title, headerBg, headerBgDark }) => {
             <h2 className="pl-0 text-base leading-4 md:pl-4">{title}</h2>
           </div>
         </div>
-        <MobileNav />
+        <ThemeSwitch />
       </div>
     </header>
   )

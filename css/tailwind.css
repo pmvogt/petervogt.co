@@ -3,19 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  a:active,
-  a:visited,
-  a:hover {
-    background-image: linear-gradient(
-      to top,
-      theme('colors.rose.400'),
-      theme('colors.rose.300'),
-      transparent
-    );
-    background-position: 0 120%;
-    background-repeat: no-repeat;
-    background-size: auto 0.75rem;
-  }
 }
 
 :root {

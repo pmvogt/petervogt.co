@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from './Link'
 
 import { useTheme } from 'next-themes'
@@ -16,8 +15,8 @@ const Card = ({ title, darkBg, bg, href }) => {
   const currentTheme = theme
 
   return (
-    <motion.button
-      type="motion.button"
+    <button
+      type="button"
       className="leading-0 h-full w-full rounded-lg bg-cover bg-center text-left text-slate-900"
       style={{
         backgroundImage: `url(${currentTheme === 'dark' ? `${darkBg}` : `${bg}`})`,
@@ -32,7 +31,7 @@ const Card = ({ title, darkBg, bg, href }) => {
           </div>
         </div>
       </Link>
-    </motion.button>
+    </button>
   )
 }
 

@@ -8,20 +8,40 @@ headerBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827376/mesh/me
 headerBgDark: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827317/mesh/mesh-landscape-7.png'
 ---
 
-<p className="pt-0">**Timeframe**: 2018 - Current</p>
-<p className="mt-3">**Role**: Design Technologist</p>
-<p className="mt-3">**Companies**: projekt202, USAA</p>
+<div className="mb-8 grid grid-cols-2 gap-8 border-y border-slate-900/40 py-4 dark:border-eggshell-50/40">
+  <ul className="list-style-none">
+    <li className="pt-0">**Timeframe**: 2018 - Current</li>
+    <li className="mt-3">**Role**: Design Technologist</li>
+    <li className="mt-3">**Companies**: projekt202, USAA</li>
+    <li className="mt-3">
+      **Skills Leveraged**: Figma, Javascript, SASS, REST APIs, Systems thinking, Competitive
+      research, Sketch
+    </li>
+  </ul>
+  <div>
+    <label className="pb-4">**Table of Contents**</label>
+    <TOCInline toc={props.toc} exclude="Overview" toHeading={3} />
+  </div>
+</div>
+
+## Summary
 
 In my career, I've been fortunate to have some incredible opportunities embedded in Design Systems teams.
 At this point I have a pretty solid feel for the majority of problems - at least at a very high altitude - that DS teams solve both in service of their consumers, but also internally as a team. Adoption, evangelism, proactive community outreach, documentation, "Do we give them nothing but organisms/atoms or do we lock everything the hell down?"...and right, of course, building the actual components. That part is the real fun. That's what keeps me coming back.
 
 Here, I'll walk through my perspective + approach to building a UI component for web or native apps in a couple of contexts in which I've done it: One, as the sole maintainer of the design library at $BIG_PRINT_COMPANY while at projekt202. The design system had already been built by some brilliant people before me, but it hadn't been put into implementation mode yet. Teams had built some vision UX work with it, but we were about to move into a 10 team product group as part of BigPrint's company-wide digital transformation effort (which projekt202 drove).
 
-## File tree view
+## File tree view (projekt202)
 
 BigPrint, as the tongue-in-cheek-NDA-friendly name implies, specialized in providing DTC print items for consumers. So a "you give them your artwork they give you a poster with the art on it" type deal. We were re-building their in-house PoS software from the ground up, so you can imagine there were plenty of scenarios where file browsing/viewing/uploading is required. As the design system was mature already, we had the freedom to focus on some niche components like this, and this one was fun to take on.
 
+### API-based design
+
 I don't start with sketches or lo-fi work for components. Not really, anyway. It can help contextualize use cases which may give you a better picture at 40,000 feet - but really I'm thinking early about the functionality the team will need to provide. Specifically at the API label. I start to think: what does the props API table look like at the end of this?
+
+A criticism of this workflow might be that we aren't starting with the end user in the mind, but I would disagree. For starters - it isn't about prioritizing how to build the best or simplest API instead of the best UI component - it's a matter of approaching component rendering as a byproduct of application state, and understanding that our final product as a design systems team has effectively two "customer groups". I think about how the user needs in our context might be X, the consumer teams needs might be Y, and the sweet spot our component needs to serve is Z.
+
+It's probably no big shock what the file tree view is going to look like in the end. We have recurring patterns in design that make things familiar for people - Windows File Explorer and MacOS Finder appear _generally_ the same on the surface. The difference is in the specifics. Similarly, the file tree viewer we're building here will look like a bunch of others at a glance. **It's the implementation specifics that make the difference, and those begin and end in the API**. Figma assets and Sketch libraries mean nothing if they don't reflect the actual implementation accurately.
 
 An outline forms in my notebook:
 
@@ -116,3 +136,7 @@ Then begin prepping some handoff docs, which will supplement both a codepen and 
 />
 
 And that's about the long and short of it, as they say.
+
+## Segmented Toggle (USAA)
+
+### Initial Research

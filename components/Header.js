@@ -21,12 +21,12 @@ const Header = ({ title }) => {
 
           <li className="hidden flex-shrink border-l border-r border-slate-700/50 pl-8 pr-8 dark:border-slate-100/50 xl:block">
             <h2 className="text-center font-sans text-base font-normal leading-normal">
-              Product Designer / Design Technologist
+              Design Technologist
             </h2>
           </li>
           <li className="hidden border-r border-slate-700/50 pl-8 pr-8 dark:border-slate-100/50 xl:block">
             <h2 className="text-center font-sans text-base font-normal leading-normal">
-              Currently Sr. Designer @ USAA
+              Currently Sr Designer @ USAA
             </h2>
           </li>
         </ul>
@@ -36,7 +36,7 @@ const Header = ({ title }) => {
         </div>
       </div>
       <div className="pt-4 md:hidden">
-        <h2>Product Designer & Design Technologist.</h2>
+        <h2>Design Technologist</h2>
         <h3>
           <strong>Currently:</strong> Sr. Designer @ USAA
         </h3>
