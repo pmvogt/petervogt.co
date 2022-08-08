@@ -3,9 +3,7 @@ import Router, { useRouter } from 'next/router'
 import { useTheme } from 'next-themes'
 
 import ThemeSwitch from './ThemeSwitch'
-import Link from './Link'
 import BackButton from './BackButton'
-import MobileNav from './MobileNav'
 
 const Header = ({ title, headerBg, headerBgDark }) => {
   const { theme, setTheme } = useTheme()
