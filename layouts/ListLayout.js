@@ -1,8 +1,10 @@
+import Header from '@/components/Header'
 import Link from '@/components/Link'
 
 export default function ListLayout({ posts, title }) {
   return (
     <>
+      <Header />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <ul>
           {posts.map((frontMatter) => {

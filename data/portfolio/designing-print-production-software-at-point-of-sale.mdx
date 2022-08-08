@@ -8,18 +8,17 @@ headerBg: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827320/mesh/me
 headerBgDark: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827323/mesh/mesh-landscape-8.png'
 ---
 
-<div className="space-evenly mb-8 flex border-y border-slate-900/40 py-4 dark:border-eggshell-50/40">
-  <ul className="list-style-none w-3/4">
-    <li className="pt-0">**Timeframe**: 2017 - 2019</li>
-    <li className="mt-3">**Role**: Experience Designer, Design Technologist</li>
-    <li className="mt-3">
-      **Skills Leveraged**: Moderated user testing, Contextual inquiries, Heuristic evaluation,
-      Sketch, Abstract, FramerJS
-    </li>
-  </ul>
+<div className="mb-8 grid grid-cols-1 border-y border-slate-900/40 py-4 dark:border-eggshell-50/40 md:grid-cols-2">
   <div>
-    <label className="pb-4">**Table of Contents**</label>
-    <TOCInline toc={props.toc} exclude="Overview" toHeading={3} />
+    <ul className="list-style-none">
+      <li>**Timeframe**: 2017 - 2019</li>
+      <li>**Role**: Experience Designer, Design Technologist</li>
+      <li>**Skills Leveraged**: Moderated user testing, Contextual inquiries, Heuristic</li>
+      <li>dingus</li>
+    </ul>
+  </div>
+  <div className="mt-6 md:mt-0">
+    <TOCInline asDisclosure toc={props.toc} exclude="Overview" toHeading={3} />
   </div>
 </div>
 

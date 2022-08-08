@@ -18,9 +18,8 @@ headerBgDark: 'https://res.cloudinary.com/dyc1seeg9/image/upload/v1659827317/mes
       research, Sketch
     </li>
   </ul>
-  <div>
-    <label className="pb-4">**Table of Contents**</label>
-    <TOCInline toc={props.toc} exclude="Overview" toHeading={3} />
+  <div className="mt-6 md:mt-0">
+    <TOCInline asDisclosure toc={props.toc} exclude="Overview" toHeading={3} />
   </div>
 </div>
 
@@ -140,3 +139,82 @@ And that's about the long and short of it, as they say.
 ## Segmented Toggle (USAA)
 
 ### Initial Research
+
+Where the nuts and bolts were prioritized first with tree view, the segmented toggle component I concepted for USAA's design system team was a bit of a different situation. The system already had a tabs component, form groups, and other similar controls - we wanted to be judicious in how we built this component with specific use-cases in mind. We first wanted to establish as a team what the needs of our consumers is and how that intersects with industry standard implementations of a segmented toggle.
+
+First we gathered some comps that were coupled directly with requests from design teams who asked for a segmented toggle.
+
+<CustomImage
+  publicId="work/usaa/seg-toggle6.png"
+  alt="Design system decision trees for when to use a segmented toggle"
+  width={483}
+  height={847}
+  preview
+  mdx
+/>
+
+The patterns were all pretty similar: most of them were used to filter pricing results on things like
+quote flows for members. Things like "Monthly/Yearly" price comparisons, "Deposits/Withdrawls" in a bank
+account statement view - lots of binary-ish design patterns.
+
+We did research into open-source design system docs from companies like Lyft and Gitlab to see what their implementation guidance was. There was a lot of precedent here:
+
+<CustomImage
+  publicId="work/usaa/seg-toggle5.png"
+  alt="Design system decision trees for when to use a segmented toggle"
+  width={588}
+  height={923}
+  preview
+  mdx
+/>
+
+<br />
+
+<CustomImage
+  publicId="work/usaa/seg-toggle4.png"
+  alt="Segmented contexts out in the wild"
+  width={634}
+  height={924}
+  preview
+  mdx
+/>
+
+And a lot of variance, too. We felt like Gitlab's decision table was a bit too broad for the scope of our work. The contexts in which we'd need it were probably much smaller - none of the designs we'd seen internally that asked for a segmented toggle had any more than two, in fact. Our own internal community feedback indicated that three options would be the most they'd need. This at least felt like a strong direction with flexibility to expand (with rationale) if we needed to.
+
+### Nuts & bolts
+
+USAA were still Sketch-first at the time, so my focus this time was preparing components for the Design System team's web library. From [my time as a guest developer](/usaa-insurance-and-design-system) on their dev team, I was familiar with the markup for their vanilla and React components and could present a proposal accordingly:
+
+<CustomImage
+  publicId="work/usaa/seg-toggle7.png"
+  alt="Proposed states and UI components for Segmented Toggle Sketch library component"
+  width={779}
+  height={552}
+  preview
+  mdx
+/>
+
+<br />
+
+<CustomImage
+  publicId="work/usaa/seg-toggle8.png"
+  alt="Segmented control proposed sketch symbol structure with design tokens"
+  width={779}
+  height={552}
+  preview
+  mdx
+/>
+
+<br />
+
+<CustomImage
+  publicId="work/usaa/seg-toggle2.png"
+  alt="SASS, API and markup proposal for Segmented Toggle code libraries"
+  width={778}
+  height={550}
+  preview
+  mdx
+/>
+
+<br />
+As mentioned above and I hope this work shows - this is the part I love the most.

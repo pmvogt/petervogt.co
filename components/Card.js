@@ -25,7 +25,7 @@ const Card = ({ title, darkBg, bg, href }) => {
       <Link href={href} aria-label={`Link to ${title}`}>
         <div className="h-36 overflow-hidden rounded-xl md:h-full">
           <div className="p-4">
-            <h2 className="font-serif text-1 font-normal tracking-0 dark:text-eggshell-50 md:text-5">
+            <h2 className="font-serif text-1 font-normal tracking-0 text-slate-900 dark:text-eggshell-50 md:text-5">
               {title}
             </h2>
           </div>
