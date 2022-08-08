@@ -21,7 +21,7 @@ In the 90s, when personalized homepages were a mainstream fad, here is where I'd
 
 I live with my wife who is the light of my life + our three rescue dogs in Texas, United States. I'm an avid gamer and former pop-punk/hardcore musician of many years. My areas of expertise are design systems, design tools, designer + engineer relations, modern UI dev best practices, and UX research. I currently work in USAA's Chief Design Office. My primary role is on the innovation team for USAA Insurance, but I am also flexed across the org with small engagements (building a coded prototype, helping innovate on a stale project, etc).
 
-My resume is <a href="#">here</a>. I'm available for consulting work, speaking engagements, and content partnerships. If you are struggling with your design career or are burnt out and just want to talk, my door is always open as well.
+My resume is <a href="https://asset.cloudinary.com/dyc1seeg9/f9a3ab56d12c4eac8601ef26af5e0b64">here</a>. I'm available for consulting work, speaking engagements, and content partnerships. If you are struggling with your design career or are burnt out and just want to talk, my door is always open as well.
 
 <figure className="flex backdrop-brightness-50 dark:backdrop-brightness-0 justify-center items-center mt-4">
   <Image className="rounded-xl" src="/static/favicons/logo.svg" alt="site logo - blurred gradient circle" width={164} height={164}/>
