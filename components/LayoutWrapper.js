@@ -8,7 +8,7 @@ const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
       <AnimatePresence initial={false} exitBeforeEnter>
-        <div className="flex h-full flex-col bg-gradient-light pb-8 dark:bg-gradient-dark md:h-screen">
+        <div className="flex h-screen flex-col overflow-y-scroll bg-gradient-light pb-8 dark:bg-gradient-dark">
           <motion.main
             key={router.asPath}
             initial={{

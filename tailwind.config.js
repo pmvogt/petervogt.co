@@ -62,6 +62,10 @@ module.exports = {
       15: ['5.143rem'],
       16: ['5.929rem'],
     },
+    screens: {
+      xs: '350px',
+      ...defaultTheme.screens,
+    },
     lineHeight: {
       none: '1',
       tight: '.857rem',

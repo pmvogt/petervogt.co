@@ -15,7 +15,7 @@ export default function PostLayout({ frontMatter, children }) {
         title={frontMatter.title}
       />
       <ScrollTopAndComment />
-      <article className="bg-gradient-light dark:bg-gradient-dark">
+      <article className="h-full bg-gradient-light dark:bg-gradient-dark">
         <div className="px-8 xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <div
             className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"

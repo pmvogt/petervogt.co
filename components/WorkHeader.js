@@ -20,7 +20,7 @@ const Header = ({ title, headerBg, headerBgDark }) => {
   return (
     <header
       title={title}
-      className="sticky top-0 z-50 w-full border-b-2 border-slate-900/40 bg-cover bg-center text-eggshell-50 shadow-md"
+      className="sticky top-0 z-50 w-full bg-cover bg-center text-eggshell-50 shadow-xl"
       style={{
         backgroundImage:
           pathname != '/' && `url(${currentTheme === 'dark' ? `${headerBg}` : `${headerBgDark}`})`,

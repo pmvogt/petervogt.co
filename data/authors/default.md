@@ -22,3 +22,5 @@ I live with my wife who is the light of my life + our three rescue dogs in Texas
 My resume is <a href="#">here</a>. I'm available for consulting work, speaking engagements, and content partnerships. If you are struggling with your design career or are burnt out and just want to talk, my door is always open as well.
 
 -PV
+
+<Image src="/static/favicons/logo.svg" alt="site logo - blurred gradient circle" width={164} height={164} />

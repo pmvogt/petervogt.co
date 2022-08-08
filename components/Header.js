@@ -12,7 +12,7 @@ const Header = ({ title }) => {
   return (
     <AnimatePresence>
       <header title={title} className="w-full bg-cover px-9 text-slate-900 dark:text-eggshell-50">
-        <div className="flex w-full items-center border-b border-slate-700/50 py-2 dark:border-slate-100/50 md:justify-between md:border-b-0 xl:pt-12">
+        <div className="flex w-full items-center border-b border-slate-700/50 py-2 dark:border-slate-100/50 md:justify-between md:border-b-0 xl:pt-8">
           <ul className="flex w-full flex-col items-start whitespace-pre text-center sm:w-full md:w-full md:flex-row md:items-center lg:w-6/12">
             <li className="pr-0 lg:pr-8">
               <Link href="/">
@@ -44,7 +44,7 @@ const Header = ({ title }) => {
             <strong>Currently:</strong> Sr. Designer @ USAA
           </h3>
         </div>
-        <nav className="flexjustify-between pb-2 pt-3 md:flex md:pb-8">
+        <nav className="flexjustify-between py-4 pt-3 md:flex md:pb-8">
           <div className="flex w-full items-center justify-between md:justify-start">
             <div className="flex">
               {headerNavLinks.map((link) => (
