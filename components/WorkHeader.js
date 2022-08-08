@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Router, { useRouter } from 'next/router'
+import Link from './Link'
 import { useTheme } from 'next-themes'
-
+import headerNavLinks from '@/data/headerNavLinks'
 import ThemeSwitch from './ThemeSwitch'
 import BackButton from './BackButton'
 
@@ -33,9 +34,23 @@ const Header = ({ title, headerBg, headerBgDark }) => {
             <h1 className="pointer-events-none pr-0 font-serif text-1 font-semibold tracking-1 md:pr-6 md:text-2 md:leading-4">
               Peter Vogt
             </h1>
-            <h2 className="pl-0 text-base leading-4 md:pl-4">{title}</h2>
+            <h2 className="pl-0 text-base leading-4 md:pl-4 md:pr-4">{title}</h2>
+            <div className="flex pl-4">
+              {headerNavLinks.map((link) => (
+                <Link
+                  key={link.title}
+                  href={link.href}
+                  className={`font-regular mr-4 cursor-pointer font-sans tracking-8 hover:underline-offset-4 ${
+                    asPath === link.href ? 'no-underline' : 'text-slate-900 dark:text-eggshell-50'
+                  }`}
+                >
+                  {link.title}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
+
         <ThemeSwitch />
       </div>
     </header>
