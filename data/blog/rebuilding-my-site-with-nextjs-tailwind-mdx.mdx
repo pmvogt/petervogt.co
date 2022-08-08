@@ -1,9 +1,63 @@
 ---
 title: Rebuilding my site with NextJS, Tailwind, and MDX
 date: '2021-08-08'
-excerpt: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt ab maiores eligendi nemo, ipsa, pariatur
+excerpt: So I basically re-build my portfolio every couple of years
 ---
 
-# Rebuilding my portfolio with NextJS, Tailwind and MDX
+# Rebuilding my portfolio with Figma, NextJS, Tailwind and MDX
 
-Under construction
+<br />
+
+---
+
+So I basically re-build my portfolio every couple of years. I think it's a good exercise for designers to just power through it once in a while. What's more, I was getting tired of LinkedIn messages from recruiters mentioning they had a great opportunity but couldn't see any work samples on my existing site. Which was annoying, but fair. I suppose if you're looking to hire someone who calls themselves a designer or design technologist it stands to reason they should have some current up-to-date work samples. This is somewhat difficult for me, as most of the work I've done during 9-5 for the last 5 years or so is heavily NDA protected. I tried very hard here to protect those interests and also demonstrate that I can, in fact, do the work I say I do.
+
+My last site was built with theme-ui, next, and to be honest was rushed through. I took more time with this iteration of the site. I would say it took me about 2 full months working off-hours and weekends between designing and building it all out.
+
+## Ye olde details
+
+A breakdown of the site's "stack", or whatever:
+
+### Design system
+
+The site was designed in Figma with a design system that I made for my own personal projects called Hoxton. Here's a sample of the Figma tokens/primitives:
+
+<CustomImage publicId="work/hox.png" width={2716} height={1296} mdx />
+
+Part of me wants to open source it into the Figma community, but I don't know that I will. I'm happy to add anyone to the file who wants to take a look or duplicate it though.
+
+### Starter repo
+
+The site was made using a boilerplate by [@timlrx](https://github.com/timlrx). I was looking for a starter that already integrated NextJS, MDX, and Tailwind together. It turns out this combination is popular - [LOTS of people are using Tim's starter](https://github.com/timlrx/tailwind-nextjs-starter-blog#examples), and that's a far from comprehensive list. I found many more sites just trolling around Github public repos.
+
+### Why Tailwind?
+
+I've used tailwind for a couple of small projects/prototypes before. I really love how streamlined the entire library is. The fact that I can provide completely custom tokens for everything is a huge bonus for me. I found theme-ui to be less intuitive in this regard when I used it for my last portfolio. I have no doubt of the flexibility of theme-ui, but leveraging it felt harder for me.
+
+It's also great to be able to pull simple snippets that other folks have made when you need them. I had to come up with an image loader and to be honest didn't feel like designing anything fancy, so I pulled a sample from (tailwind-elements)[https://tailwind-elements.com/docs/standard/components/spinners/]. gg, ez.
+
+### Why MDX + Next?
+
+Well, I love [Next](https://nextjs.org/) for building static sites quickly and have a good deal of familiarity with it. [The Nevada Independent](https://nvindy.com), a site I've worked on before is built on it so I didn't need any additional time to learn GraphQL for Gatsby or something like that.
+
+Plus, dark mode support via `next-themes` + tailwind dark-mode support made things very easy for the most part.
+
+[MDX](https://mdxjs.com/) was picked for it's ability to provide an awesome writing experience - I anticipate at some point I'll leverage inline code playgrounds and stuff like that in my posts, so it made sense to have a format that can support that natively.
+
+> _But Why not webflow?_
+
+Because no-code is for the weak!
+
+## Challenges
+
+That said, there were some real pains in the ass:
+
+- -Image handling in Next is not great. I ended up writing a custom image component for my MDX files that pipes images in from Cloudinary. I think in general Gatsby has solved this problem in a nicer way. I was hoping to find a third-party lightbox gallery to display multiple images in, and there are a shockingly low amount of those available that are still maintained.
+
+- -MDX had a major release recently and the rest of the ecosystem I think is still catching up. I had to debug a lot of errors around importing components to pages that contain MDX. Some of it I think was lack of experience using Next to parse MDX in my own custom ways, but I dealt with a lot of incompatible dep messages from Node.
+
+- -Figma embeds is a big one I've got a bone to pick with. I hate picking bones with Figma because it is one of my all-time favorite apps and they do almost everything right. But embedding them into my work pages here wrought a hellfire of requests upon the browser - 166 to be specific!!! Maybe that's something wrong on my end, but I found a couple of people on Twitter who had similar issues with embed performance on their sites. If anyone at Figma (or elsewhere) sees this and wants to [email me](mailto:peter@petervogt.co?subject=Hi%20dummy%20you%20are%20wrong%20about%20Figma%20embeds) for a fix, I'd be most appreciative!
+
+## In the end though,
+
+I am very happy with how the site turned out and look forward to adding more features and content. A big thank you to Tim for the project starter and to the friends who gave feedback on my design and debugged with me.

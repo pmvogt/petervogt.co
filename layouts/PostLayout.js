@@ -18,7 +18,7 @@ export default function PostLayout({ frontMatter, children }) {
       <article className="h-full bg-gradient-light dark:bg-gradient-dark">
         <div className="px-8 xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <div
-            className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
+            className="divide-y divide-gray-200 pt-4 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">

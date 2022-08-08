@@ -37,11 +37,11 @@ export const CustomImage = ({
   const aspectRatio = aspect ? aspect.height / aspect.width : undefined
 
   const LoadingIndicator = () => (
-    <div className="min-w-screen flex min-h-screen items-center justify-center bg-gray-100 p-5">
-      <div className="flex animate-pulse space-x-2">
-        <div className="h-3 w-3 rounded-full bg-gray-500"></div>
-        <div className="h-3 w-3 rounded-full bg-gray-500"></div>
-        <div className="h-3 w-3 rounded-full bg-gray-500"></div>
+    <div className="min-w-screen flex min-h-screen items-center justify-center rounded-sm bg-slate-900 p-8">
+      <div className="flex animate-pulse space-x-4">
+        <div className="h-6 w-6 rounded-full bg-rose-500"></div>
+        <div className="h-6 w-6 rounded-full bg-mint-500"></div>
+        <div className="h-6 w-6 rounded-full bg-rose-500"></div>
       </div>
     </div>
   )

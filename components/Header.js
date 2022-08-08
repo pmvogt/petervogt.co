@@ -3,7 +3,7 @@ import ThemeSwitch from './ThemeSwitch'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import { useRouter } from 'next/router'
-import { Figma, Dribbble } from '@/components/Icons'
+import { Figma, Dribbble, Github } from '@/components/Icons'
 import { AnimatePresence } from 'framer-motion'
 
 const Header = ({ title }) => {
@@ -44,7 +44,7 @@ const Header = ({ title }) => {
             <strong>Currently:</strong> Sr. Designer @ USAA
           </h3>
         </div>
-        <nav className="flexjustify-between py-4 pt-3 md:flex md:pb-8">
+        <nav className="flexjustify-between pt-6 pb-4 md:flex md:pb-8">
           <div className="flex w-full items-center justify-between md:justify-start">
             <div className="flex">
               {headerNavLinks.map((link) => (
@@ -59,9 +59,12 @@ const Header = ({ title }) => {
                 </Link>
               ))}
             </div>
-            <div className="flex">
+            <div className="flex items-center pl-0 md:pl-4">
               <Link href="https://www.figma.com/@vogtbot9000">
                 <Figma />
+              </Link>
+              <Link href="https://github.com/pmvogt">
+                <Github />
               </Link>
               <Link href="https://dribbble.com/petermvogt">
                 <Dribbble />
