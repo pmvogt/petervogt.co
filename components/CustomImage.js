@@ -27,6 +27,7 @@ export const CustomImage = ({
     cloud: {
       cloudName: 'dyc1seeg9',
     },
+    fetch_format: 'auto',
     transformations: {
       rawTransformation: aspect
         ? `c_fill,ar_${aspect.width}:${aspect.height},w_${width}`
