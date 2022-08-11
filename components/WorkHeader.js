@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Router, { useRouter } from 'next/router'
-import Link from './Link'
 import { useTheme } from 'next-themes'
+
+import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import ThemeSwitch from './ThemeSwitch'
 import BackButton from './BackButton'
+import VolumeToggle from './VolumeToggle'
 
 const Header = ({ title, headerBg, headerBgDark }) => {
   const { theme, setTheme } = useTheme()
@@ -50,8 +52,10 @@ const Header = ({ title, headerBg, headerBgDark }) => {
             </div>
           </div>
         </div>
-
-        <ThemeSwitch />
+        <div className="flex">
+          <VolumeToggle />
+          <ThemeSwitch />
+        </div>
       </div>
     </header>
   )

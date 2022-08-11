@@ -1,16 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { useTheme } from 'next-themes'
+import useSound from 'use-sound'
 import { motion, AnimatePresence } from 'framer-motion'
+
 import { animations } from '@/data/animations'
 import { Dark, Light } from '@/components/Icons'
-import useSound from 'use-sound'
+
+import { SoundContext } from '../context/sound-context'
 
 const ThemeSwitch = () => {
+  const { soundToggled } = useContext(SoundContext)
+
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
-  const [play] = useSound('/static/proud_click.mp3', { volume: 0.1 })
 
-  // When mounted on client, now we can show the UI
+  // check global toggleSound state + mute if toggleSound is off
+  const [play] = useSound('/static/proud_click.mp3', {
+    soundEnabled: soundToggled ? true : false,
+    volume: 0.1,
+  })
+
   useEffect(() => setMounted(true), [])
 
   return (
@@ -18,7 +27,7 @@ const ThemeSwitch = () => {
       <motion.button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="bg-transparent outline-none transition-all duration-150 ease-linear"
+        className="rounded-md bg-gray-300 py-2 px-4 outline-none transition-all duration-150 ease-linear dark:bg-opacity-10"
         onClick={() => {
           setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')
           play()
@@ -31,7 +40,7 @@ const ThemeSwitch = () => {
           fill="none"
           initial={animations.pathInitial}
           animate={animations.pathAnimate}
-          className="h-8 w-8 text-rose-400 dark:text-mint-300"
+          className="h-8 w-8 text-slate-900 dark:text-eggshell-50"
         >
           {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? <Light /> : <Dark />}
         </motion.svg>

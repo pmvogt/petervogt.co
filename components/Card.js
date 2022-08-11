@@ -1,13 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import Link from './Link'
+import { useState, useEffect, useContext } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import { useSound } from 'use-sound'
 
+import Link from './Link'
+
+import { SoundContext } from 'context/sound-context'
+
 const Card = ({ title, darkBg, bg, href }) => {
+  const { soundToggled } = useContext(SoundContext)
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [play] = useSound('/static/quick_toggle.mp3', { volume: 0.25 })
+  const [play] = useSound('/static/quick_toggle.mp3', {
+    soundEnabled: soundToggled ? true : false,
+    volume: 0.25,
+  })
 
   // check if components are mounted to avoid hydration errors while theme switching
   useEffect(() => setMounted(true), [])

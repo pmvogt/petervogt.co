@@ -1,11 +1,19 @@
-import { useEffect } from 'react'
+import { useContext } from 'react'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { animations } from '@/data/animations'
 import { useSound } from 'use-sound'
+
+import { SoundContext } from 'context/sound-context'
+
 const BackButton = () => {
+  const { soundToggled } = useContext(SoundContext)
+
   const router = useRouter()
-  const [play] = useSound('/static/quick_toggle.mp3', { volume: 0.25 })
+  const [play] = useSound('/static/quick_toggle.mp3', {
+    soundEnabled: soundToggled ? true : false,
+    volume: 0.25,
+  })
 
   return (
     <button

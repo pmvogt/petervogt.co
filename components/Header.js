@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
+
+import VolumeToggle from './VolumeToggle'
 import ThemeSwitch from './ThemeSwitch'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import { useRouter } from 'next/router'
 import { Figma, Dribbble, Github } from '@/components/Icons'
-import { AnimatePresence } from 'framer-motion'
 
 const Header = ({ title }) => {
   const { asPath } = useRouter()
@@ -34,6 +35,7 @@ const Header = ({ title }) => {
             </li>
           </ul>
           <div className="flex items-center">
+            <VolumeToggle />
             <ThemeSwitch />
             {/* <button className="py-1 pl-5">terminal</button> */}
           </div>
