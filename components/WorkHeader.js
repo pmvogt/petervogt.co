@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import Router, { useRouter } from 'next/router'
 import { useTheme } from 'next-themes'
 
@@ -8,7 +8,11 @@ import ThemeSwitch from './ThemeSwitch'
 import BackButton from './BackButton'
 import VolumeToggle from './VolumeToggle'
 
-const Header = ({ title, headerBg, headerBgDark }) => {
+import { SoundContext } from 'context/sound-context'
+
+const WorkHeader = ({ title, headerBg, headerBgDark }) => {
+  const { soundToggled, soundToggleFunction } = useContext(SoundContext)
+
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const { pathname, router, asPath } = useRouter()
@@ -61,4 +65,4 @@ const Header = ({ title, headerBg, headerBgDark }) => {
   )
 }
 
-export default Header
+export default WorkHeader
