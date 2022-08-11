@@ -8,18 +8,18 @@ export default function ListLayout({ posts, title }) {
   return (
     <AnimatePresence exitBeforeEnter>
       <Header />
-      <div className="divide-y divide-gray-200 px-8 py-4 dark:divide-gray-700 md:pt-0">
-        <ul className="container w-full">
+      <div className="w-full px-8 py-4 md:pt-0">
+        <ul className="w-full">
           {posts.map((frontMatter) => {
             const { slug, date, title } = frontMatter
             return (
               <li
                 key={slug}
-                className="outline-transparent rounded-lg bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-4 shadow-xl dark:from-violet-500 dark:to-pink-500 md:pt-2"
+                className="w-full rounded-lg bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-4 shadow-xl dark:from-violet-500 dark:to-pink-500 md:pt-2"
               >
                 <article className="w-full">
                   <div className="space-between flex w-full items-center">
-                    <div className="">
+                    <div>
                       <h3 className="text-2xl tracking-tight flex-wrap font-bold leading-4">
                         <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
                           {title}
