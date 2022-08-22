@@ -4,7 +4,7 @@ import { VolumeOn, VolumeOff } from './Icons'
 
 import { SoundContext } from '../context/sound-context'
 
-const VolumeToggle = ({ isToggled }) => {
+const VolumeToggle = () => {
   const { soundToggled, soundToggleFunction } = useContext(SoundContext)
 
   return (
@@ -13,7 +13,6 @@ const VolumeToggle = ({ isToggled }) => {
         className="mr-4 rounded-md bg-gray-300 py-2 px-4 outline-none transition-all duration-150 ease-linear dark:bg-opacity-10"
         type="button"
         onClick={soundToggleFunction}
-        isToggled={isToggled}
       >
         {soundToggled ? <VolumeOn /> : <VolumeOff />}
       </motion.button>

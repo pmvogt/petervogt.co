@@ -9,7 +9,7 @@ export default function ListLayout({ posts, title }) {
     <AnimatePresence exitBeforeEnter>
       <Header />
       <div className="w-full px-8 py-4 md:pt-0">
-        <ul className="w-full">
+        <ul className="w-full space-y-8">
           {posts.map((frontMatter) => {
             const { slug, date, title } = frontMatter
             return (

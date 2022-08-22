@@ -33,7 +33,7 @@ const WorkHeader = ({ title, headerBg, headerBgDark }) => {
           pathname != '/' && `url(${currentTheme === 'dark' ? `${headerBg}` : `${headerBgDark}`})`,
       }}
     >
-      <div className="flex h-full w-full items-center justify-between border-b border-slate-500/40 px-8 py-3 backdrop-blur-lg backdrop-brightness-50">
+      <div className="flex h-full w-full items-center justify-between border-b border-slate-500/40 px-4  py-3 backdrop-blur-lg backdrop-brightness-50">
         <div className="flex">
           <BackButton onClick={() => router.back()} />
           <div className="ml-4 flex flex-col divide-x-0 py-2 md:flex-row md:items-center md:divide-x-2">
