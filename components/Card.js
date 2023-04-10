@@ -1,9 +1,9 @@
+import Link from 'next/link'
+
 import { useState, useEffect, useContext } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import { useSound } from 'use-sound'
-
-import Link from './Link'
 
 import { SoundContext } from 'context/sound-context'
 
@@ -46,7 +46,7 @@ const Card = ({ title, darkBg, bg, href }) => {
           backgroundImage: `url(${resolvedTheme === 'dark' ? `${darkBg}` : `${bg}`})`,
         }}
       >
-        <Link onClick={play} href={href} aria-label={`Link to ${title}`}>
+        <Link onClick={play} href={href} aria-label={`Link to ${title}`} passHref>
           <div className="h-36 overflow-hidden rounded-xl md:h-full">
             <div className="px-4 md:py-2 lg:py-4">
               <h2 className="font-serif font-normal tracking-0 text-slate-900 dark:text-eggshell-50 xs:text-0 sm:text-2 md:text-5">

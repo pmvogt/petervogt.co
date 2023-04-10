@@ -27,7 +27,7 @@ const ThemeSwitch = () => {
       <motion.button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="rounded-md bg-gray-300 py-2 px-4 outline-none transition-all duration-150 ease-linear dark:bg-opacity-10"
+        className="rounded-md bg-gray-300 px-4 py-2 outline-none transition-all duration-150 ease-linear dark:bg-opacity-10"
         onClick={() => {
           setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')
           play()

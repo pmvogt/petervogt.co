@@ -2,11 +2,11 @@ import { AnimatePresence } from 'framer-motion'
 import Header from '@/components/Header'
 import formatDate from '@/lib/utils/formatDate'
 
-import Link from '@/components/Link'
+import Link from 'next/link'
 
 export default function ListLayout({ posts, title }) {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       <Header />
       <div className="w-full px-8 py-4 md:pt-0">
         <ul className="w-full space-y-8">

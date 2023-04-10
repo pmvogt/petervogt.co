@@ -7,7 +7,7 @@ const LayoutWrapper = ({ children }) => {
 
   return (
     <SectionContainer>
-      <AnimatePresence initial={false} exitBeforeEnter>
+      <AnimatePresence initial={false} mode="wait">
         <div className="flex h-screen flex-col overflow-y-scroll bg-gradient-light pb-8 dark:bg-gradient-dark">
           <motion.main
             key={router.asPath}

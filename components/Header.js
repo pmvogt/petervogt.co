@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import { AnimatePresence } from 'framer-motion'
 
 import VolumeToggle from './VolumeToggle'
 import ThemeSwitch from './ThemeSwitch'
-import Link from './Link'
+
 import headerNavLinks from '@/data/headerNavLinks'
 import { useRouter } from 'next/router'
 import { Figma, Dribbble, Github } from '@/components/Icons'
@@ -11,12 +12,12 @@ const Header = ({ title }) => {
   const { asPath } = useRouter()
 
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       <header title={title} className="w-full bg-cover px-9 text-slate-900 dark:text-eggshell-50">
         <div className="flex w-full items-center border-b border-slate-700/50 py-2 dark:border-slate-100/50 md:justify-between md:border-b-0 xl:pt-8">
           <ul className="flex w-full flex-col items-start whitespace-pre text-center sm:w-full md:w-full md:flex-row md:items-center lg:w-6/12">
             <li className="pr-0 lg:pr-8">
-              <Link href="/">
+              <Link href="/" passHref>
                 <h1 className="font-serif text-7 font-semibold tracking-1 md:text-9 md:leading-8 lg:text-10 lg:leading-9">
                   Peter Vogt
                 </h1>
@@ -46,7 +47,7 @@ const Header = ({ title }) => {
             <strong>Currently:</strong> Sr. Designer @ USAA
           </h3>
         </div>
-        <nav className="flexjustify-between pt-6 pb-4 md:flex md:pb-8">
+        <nav className="flexjustify-between pb-4 pt-6 md:flex md:pb-8">
           <div className="flex w-full items-center justify-between md:justify-start">
             <div className="flex">
               {headerNavLinks.map((link) => (
@@ -64,13 +65,13 @@ const Header = ({ title }) => {
               ))}
             </div>
             <div className="flex items-center pl-0 md:pl-4">
-              <Link href="https://www.figma.com/@vogtbot9000">
+              <Link href="https://www.figma.com/@vogtbot9000" passHref>
                 <Figma />
               </Link>
-              <Link href="https://github.com/pmvogt">
+              <Link href="https://github.com/pmvogt" passHref>
                 <Github />
               </Link>
-              <Link href="https://dribbble.com/petermvogt">
+              <Link href="https://dribbble.com/petermvogt" passHref>
                 <Dribbble />
               </Link>
             </div>

@@ -68,7 +68,7 @@ export const CustomImage = ({
         }}
         onClick={preview ? () => setIsOpen(true) : undefined}
       >
-        <div className="absolute top-0 left-0">
+        <div className="absolute left-0 top-0">
           <Image src={url} width={width} height={height} alt={alt} title={title || alt} />
         </div>
       </div>

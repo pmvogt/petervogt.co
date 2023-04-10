@@ -1,10 +1,11 @@
 /* eslint-disable react/display-name */
 import { useMemo } from 'react'
+import Link from 'next/link'
 import { getMDXComponent } from 'mdx-bundler/client'
 
 import Image from './Image'
 import CustomImage from './CustomImage'
-import CustomLink from './Link'
+
 import TOCInline from './TOCInline'
 import Pre from './Pre'
 import { motion } from 'framer-motion'
@@ -14,7 +15,7 @@ export const MDXComponents = {
   Image,
   CustomImage,
   TOCInline,
-  a: CustomLink,
+  a: Link,
   motion,
   pre: Pre,
   p: (props) => (
@@ -32,10 +33,10 @@ export const MDXComponents = {
   h2: (props) => (
     <h2
       {...props}
-      className="mt-0 mb-4 font-serif text-7 tracking-3 md:leading-5 lg:text-9 lg:leading-8 xl:text-6"
+      className="mb-4 mt-0 font-serif text-7 tracking-3 md:leading-5 lg:text-9 lg:leading-8 xl:text-6"
     />
   ),
-  h3: (props) => <h3 {...props} className="mt-4 mb-2 font-sans text-1 tracking-4" />,
+  h3: (props) => <h3 {...props} className="mb-2 mt-4 font-sans text-1 tracking-4" />,
   wrapper: ({ components, layout, ...rest }) => {
     return <PostLayout {...rest} />
   },
