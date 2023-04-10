@@ -15,7 +15,7 @@ export default function ListLayout({ posts, title }) {
             return (
               <li
                 key={slug}
-                className="w-full rounded-lg bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-4 shadow-xl dark:from-violet-500 dark:to-pink-500 md:pt-2"
+                className="w-1/3 rounded-lg bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-4 shadow-xl dark:from-violet-500 dark:to-pink-500 md:pt-2"
               >
                 <article className="w-full">
                   <div className="space-between flex w-full items-center">
